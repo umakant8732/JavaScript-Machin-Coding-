@@ -1,0 +1,186 @@
+JavaScript Machine Coding Interview Questions
+
+Round 1 – Polyfills
+
+Easy
+
+1.  Implement Array.prototype.myMap()
+2.  Implement Array.prototype.myFilter()
+3.  Implement Array.prototype.myReduce()
+4.  Implement Array.prototype.myForEach()
+5.  Implement Array.prototype.myFind()
+6.  Implement Array.prototype.mySome()
+7.  Implement Array.prototype.myEvery()
+8.  Implement Array.prototype.myIncludes()
+9.  Implement Array.prototype.myFlat(depth)
+10. Implement String.prototype.mySplit()
+
+Medium
+
+11. Implement your own Promise.all()
+12. Implement Promise.allSettled()
+13. Implement Promise.race()
+14. Implement Promise.any()
+15. Implement Object.assign()
+16. Implement Object.create()
+17. Implement Function.prototype.myCall()
+18. Implement Function.prototype.myApply()
+19. Implement Function.prototype.myBind()
+20. Implement new keyword.
+
+Hard
+
+21. Implement LRU Cache.
+22. Implement EventEmitter.
+23. Implement Pub/Sub System.
+24. Implement Deep Clone.
+25. Implement Currying.
+26. Implement Infinite Currying.
+27. Implement Memoization.
+28. Implement Retry Promise Utility.
+29. Implement Task Queue with concurrency limit.
+30. Implement Promise Pool.
+
+Round 2 – JavaScript Utilities
+
+31. Write your own debounce.
+32. Write your own throttle.
+33. Flatten nested array.
+34. Flatten nested object.
+35. Deep merge two objects.
+36. Group array of objects by property.
+37. Remove duplicate objects.
+38. Find missing number.
+39. Find first non-repeating character.
+40. Frequency counter.
+41. Chunk an array.
+42. Zip two arrays.
+43. Rotate array.
+44. Shuffle array.
+45. Convert object to query string.
+46. Parse query string.
+47. Build pipe() function.
+48. Build compose() function.
+49. Sleep function.
+50. Delay execution utility.
+
+Round 3 – DOM Machine Coding
+
+51. Todo App
+52. Accordion
+53. Tabs Component
+54. Image Carousel
+55. Star Rating
+56. Modal
+57. Toast Notification
+58. Infinite Scroll
+59. Nested Comments
+60. OTP Input Component
+61. File Upload Preview
+62. Drag & Drop List
+63. Kanban Board
+64. Progress Bar
+65. Stopwatch
+66. Countdown Timer
+67. Password Strength Meter
+68. Password Generator
+69. Theme Switcher
+70. Color Picker
+
+Round 4 – Mini Machine Coding
+
+71. Build Autocomplete Search.
+72. Build Search with Debounce.
+73. Product Listing with Search + Filter + Sort.
+74. Shopping Cart.
+75. Pagination Component.
+76. Infinite Pagination.
+77. Multi-step Form.
+78. Dynamic Form Renderer.
+79. Quiz Application.
+80. Expense Tracker.
+81. Weather Application.
+82. GitHub Profile Search.
+83. Movie Search App.
+84. Chat UI.
+85. Notification Center.
+86. Calendar Slot Booking.
+87. Poll System.
+88. Voting App.
+89. Notes Application.
+90. Bookmark Manager.
+
+Round 5 – Event Loop / Async
+
+91. Implement promise retry.
+92. Sequential API execution.
+93. Parallel API execution.
+94. Limit concurrent API calls.
+95. Cancel previous request on new search.
+96. Request timeout wrapper.
+97. Build async queue.
+98. Build scheduler.
+99. Build retry with exponential backoff.
+100. Implement request batching.
+
+Round 6 – Real Interview Questions
+
+101. Build Google Keep.
+102. Build Trello.
+103. Build Jira Board.
+104. Build Gmail Sidebar.
+105. Build VS Code File Explorer.
+106. Build File Manager.
+107. Build Nested Folder Structure.
+108. Build Folder Explorer.
+109. Build JSON Viewer.
+110. Build JSON Editor.
+111. Build Tree Component.
+112. Build Organization Chart.
+113. Build Recursive Menu.
+114. Build Breadcrumb Navigation.
+115. Build Context Menu.
+
+Round 7 – Frequently Asked JavaScript Questions
+
+116. Explain and implement Event Delegation.
+117. Explain Closures using code.
+118. Explain Hoisting with output questions.
+119. Explain this keyword.
+120. Explain Prototype Chain.
+121. Explain Event Bubbling.
+122. Explain Event Capturing.
+123. Explain Microtask Queue.
+124. Explain Event Loop.
+125. Explain WeakMap vs Map.
+126. Explain Set vs Array.
+127. Explain Shallow vs Deep Copy.
+128. Explain Call, Apply, Bind.
+129. Explain Debounce vs Throttle.
+130. Explain Currying.
+
+Round 8 – Output Based
+
+131. Predict output (Closures)
+132. Predict output (Promises)
+133. Predict output (Event Loop)
+134. Predict output (this)
+135. Predict output (Prototype)
+136. Predict output (Hoisting)
+137. Predict output (Classes)
+138. Predict output (Async/Await)
+139. Predict output (Generators)
+140. Predict output (Array methods)
+
+Round 9 – Advanced Machine Coding
+
+141. Build Virtual DOM.
+142. Build Tiny React State.
+143. Build Redux Store.
+144. Build React-like useState.
+145. Build React-like useEffect.
+146. Build Router.
+147. Build Observable.
+148. Build Custom Hooks Library (Vanilla JS).
+149. Build Tiny Template Engine.
+150. Build Tiny Frontend Framework.
