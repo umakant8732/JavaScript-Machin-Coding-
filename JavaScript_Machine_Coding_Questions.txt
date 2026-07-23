@@ -1,179 +1,212 @@
-JavaScript Machine Coding Interview Questions
+================================================================================
+JAVASCRIPT MACHINE CODING INTERVIEW QUESTIONS
+================================================================================
 
-Round 1 – Polyfills
+This document contains a curated list of 150 JavaScript Machine Coding questions,
+systematically organized by difficulty and type to help you prepare gradually from
+basic concepts to production-grade applications.
 
-Easy
+================================================================================
+PART 1: EASY LEVEL
+================================================================================
 
-1.  Implement Array.prototype.myMap()
-2.  Implement Array.prototype.myFilter()
-3.  Implement Array.prototype.myReduce()
-4.  Implement Array.prototype.myForEach()
-5.  Implement Array.prototype.myFind()
-6.  Implement Array.prototype.mySome()
-7.  Implement Array.prototype.myEvery()
-8.  Implement Array.prototype.myIncludes()
-9.  Implement Array.prototype.myFlat(depth)
-10. Implement String.prototype.mySplit()
+--------------------------------------------------------------------------------
+1.1 EASY - CONCEPTUAL & THEORY QUESTIONS
+--------------------------------------------------------------------------------
+[Foundational JavaScript theory, interview explanations, and core syntax concepts]
 
-Medium
+1.   Explain and implement Event Delegation.
+2.   Explain Closures using code.
+3.   Explain Hoisting with output questions.
+4.   Explain this keyword.
+5.   Explain Prototype Chain.
+6.   Explain Event Bubbling.
+7.   Explain Event Capturing.
+8.   Explain WeakMap vs Map.
+9.   Explain Set vs Array.
+10.  Explain Shallow vs Deep Copy.
+11.  Explain Call, Apply, Bind.
+12.  Explain Debounce vs Throttle.
+13.  Explain Currying.
 
-11. Implement your own Promise.all()
-12. Implement Promise.allSettled()
-13. Implement Promise.race()
-14. Implement Promise.any()
-15. Implement Object.assign()
-16. Implement Object.create()
-17. Implement Function.prototype.myCall()
-18. Implement Function.prototype.myApply()
-19. Implement Function.prototype.myBind()
-20. Implement new keyword.
+--------------------------------------------------------------------------------
+1.2 EASY - CODING & OUTPUT QUESTIONS (WITHOUT DOM)
+--------------------------------------------------------------------------------
+[Basic polyfills, helper utilities, array/string manipulation, and closures/hoisting outputs]
 
-Hard
+14.  Implement Array.prototype.myMap()
+15.  Implement Array.prototype.myFilter()
+16.  Implement Array.prototype.myReduce()
+17.  Implement Array.prototype.myForEach()
+18.  Implement Array.prototype.myFind()
+19.  Implement Array.prototype.mySome()
+20.  Implement Array.prototype.myEvery()
+21.  Implement Array.prototype.myIncludes()
+22.  Implement Object.create()
+23.  Remove duplicate objects.
+24.  Find missing number.
+25.  Find first non-repeating character.
+26.  Frequency counter.
+27.  Chunk an array.
+28.  Zip two arrays.
+29.  Rotate array.
+30.  Shuffle array.
+31.  Convert object to query string.
+32.  Parse query string.
+33.  Sleep function.
+34.  Delay execution utility.
+35.  Predict output (Closures)
+36.  Predict output (this)
+37.  Predict output (Hoisting)
+38.  Predict output (Classes)
+39.  Predict output (Array methods)
 
-21. Implement LRU Cache.
-22. Implement EventEmitter.
-23. Implement Pub/Sub System.
-24. Implement Deep Clone.
-25. Implement Currying.
-26. Implement Infinite Currying.
-27. Implement Memoization.
-28. Implement Retry Promise Utility.
-29. Implement Task Queue with concurrency limit.
-30. Implement Promise Pool.
+--------------------------------------------------------------------------------
+1.3 EASY - DOM COMPONENTS
+--------------------------------------------------------------------------------
+[Simple interactive UI elements with basic state and minimal styling]
 
-Round 2 – JavaScript Utilities
+40.  Accordion
+41.  Tabs Component
+42.  Star Rating
+43.  Modal
+44.  Toast Notification
+45.  Progress Bar
+46.  Stopwatch
+47.  Countdown Timer
+48.  Password Strength Meter
+49.  Password Generator
+50.  Theme Switcher
+51.  Color Picker
 
-31. Write your own debounce.
-32. Write your own throttle.
-33. Flatten nested array.
-34. Flatten nested object.
-35. Deep merge two objects.
-36. Group array of objects by property.
-37. Remove duplicate objects.
-38. Find missing number.
-39. Find first non-repeating character.
-40. Frequency counter.
-41. Chunk an array.
-42. Zip two arrays.
-43. Rotate array.
-44. Shuffle array.
-45. Convert object to query string.
-46. Parse query string.
-47. Build pipe() function.
-48. Build compose() function.
-49. Sleep function.
-50. Delay execution utility.
 
-Round 3 – DOM Machine Coding
+================================================================================
+PART 2: MEDIUM LEVEL
+================================================================================
 
-51. Todo App
-52. Accordion
-53. Tabs Component
-54. Image Carousel
-55. Star Rating
-56. Modal
-57. Toast Notification
-58. Infinite Scroll
-59. Nested Comments
-60. OTP Input Component
-61. File Upload Preview
-62. Drag & Drop List
-63. Kanban Board
-64. Progress Bar
-65. Stopwatch
-66. Countdown Timer
-67. Password Strength Meter
-68. Password Generator
-69. Theme Switcher
-70. Color Picker
+--------------------------------------------------------------------------------
+2.1 MEDIUM - CONCEPTUAL & THEORY QUESTIONS
+--------------------------------------------------------------------------------
+[Under-the-hood engine mechanics, event loop theory, and execution queues]
 
-Round 4 – Mini Machine Coding
+52.  Explain Microtask Queue.
+53.  Explain Event Loop.
 
-71. Build Autocomplete Search.
-72. Build Search with Debounce.
-73. Product Listing with Search + Filter + Sort.
-74. Shopping Cart.
-75. Pagination Component.
-76. Infinite Pagination.
-77. Multi-step Form.
-78. Dynamic Form Renderer.
-79. Quiz Application.
-80. Expense Tracker.
-81. Weather Application.
-82. GitHub Profile Search.
-83. Movie Search App.
-84. Chat UI.
-85. Notification Center.
-86. Calendar Slot Booking.
-87. Poll System.
-88. Voting App.
-89. Notes Application.
-90. Bookmark Manager.
+--------------------------------------------------------------------------------
+2.2 MEDIUM - CODING & OUTPUT QUESTIONS (WITHOUT DOM)
+--------------------------------------------------------------------------------
+[Advanced polyfills, data manipulation tools, asynchronous flow structures, and promise outputs]
 
-Round 5 – Event Loop / Async
+54.  Implement Array.prototype.myFlat(depth)
+55.  Implement String.prototype.mySplit()
+56.  Implement your own Promise.all()
+57.  Implement Promise.allSettled()
+58.  Implement Promise.race()
+59.  Implement Promise.any()
+60.  Implement Object.assign()
+61.  Implement Function.prototype.myCall()
+62.  Implement Function.prototype.myApply()
+63.  Implement Function.prototype.myBind()
+64.  Implement new keyword.
+65.  Write your own debounce.
+66.  Write your own throttle.
+67.  Flatten nested array.
+68.  Flatten nested object.
+69.  Deep merge two objects.
+70.  Group array of objects by property.
+71.  Build pipe() function.
+72.  Build compose() function.
+73.  Implement promise retry.
+74.  Sequential API execution.
+75.  Parallel API execution.
+76.  Cancel previous request on new search.
+77.  Request timeout wrapper.
+78.  Predict output (Promises)
+79.  Predict output (Event Loop)
+80.  Predict output (Prototype)
+81.  Predict output (Async/Await)
+82.  Predict output (Generators)
 
-91. Implement promise retry.
-92. Sequential API execution.
-93. Parallel API execution.
-94. Limit concurrent API calls.
-95. Cancel previous request on new search.
-96. Request timeout wrapper.
-97. Build async queue.
-98. Build scheduler.
-99. Build retry with exponential backoff.
-100. Implement request batching.
+--------------------------------------------------------------------------------
+2.3 MEDIUM - DOM COMPONENTS & MINI UI APPS
+--------------------------------------------------------------------------------
+[Stateful web components, search features, forms, and common frontend interview tasks]
 
-Round 6 – Real Interview Questions
+83.  Todo App
+84.  Image Carousel
+85.  Infinite Scroll
+86.  OTP Input Component
+87.  File Upload Preview
+88.  Drag & Drop List
+89.  Build Autocomplete Search.
+90.  Build Search with Debounce.
+91.  Product Listing with Search + Filter + Sort.
+92.  Shopping Cart.
+93.  Pagination Component.
+94.  Multi-step Form.
+95.  Dynamic Form Renderer.
+96.  Quiz Application.
+97.  Expense Tracker.
+98.  Weather Application.
+99.  GitHub Profile Search.
+100. Movie Search App.
+101. Notes Application.
+102. Bookmark Manager.
+103. Build Nested Folder Structure.
+104. Build Folder Explorer.
+105. Build JSON Viewer.
+106. Build Tree Component.
+107. Build Recursive Menu.
+108. Build Breadcrumb Navigation.
+109. Build Context Menu.
 
-101. Build Google Keep.
-102. Build Trello.
-103. Build Jira Board.
-104. Build Gmail Sidebar.
-105. Build VS Code File Explorer.
-106. Build File Manager.
-107. Build Nested Folder Structure.
-108. Build Folder Explorer.
-109. Build JSON Viewer.
-110. Build JSON Editor.
-111. Build Tree Component.
-112. Build Organization Chart.
-113. Build Recursive Menu.
-114. Build Breadcrumb Navigation.
-115. Build Context Menu.
 
-Round 7 – Frequently Asked JavaScript Questions
+================================================================================
+PART 3: HARD / PRO LEVEL
+================================================================================
 
-116. Explain and implement Event Delegation.
-117. Explain Closures using code.
-118. Explain Hoisting with output questions.
-119. Explain this keyword.
-120. Explain Prototype Chain.
-121. Explain Event Bubbling.
-122. Explain Event Capturing.
-123. Explain Microtask Queue.
-124. Explain Event Loop.
-125. Explain WeakMap vs Map.
-126. Explain Set vs Array.
-127. Explain Shallow vs Deep Copy.
-128. Explain Call, Apply, Bind.
-129. Explain Debounce vs Throttle.
-130. Explain Currying.
+--------------------------------------------------------------------------------
+3.1 HARD - CODING QUESTIONS (WITHOUT DOM)
+--------------------------------------------------------------------------------
+[Custom caches, system state stores, concurrency managers, and scheduling queues]
 
-Round 8 – Output Based
+110. Build async queue.
+111. Build scheduler.
+112. Build retry with exponential backoff.
+113. Implement LRU Cache.
+114. Implement EventEmitter.
+115. Implement Pub/Sub System.
+116. Implement Deep Clone.
+117. Implement Currying.
+118. Implement Infinite Currying.
+119. Implement Memoization.
+120. Implement Retry Promise Utility.
+121. Implement Task Queue with concurrency limit.
+122. Implement Promise Pool.
+123. Limit concurrent API calls.
+124. Implement request batching.
 
-131. Predict output (Closures)
-132. Predict output (Promises)
-133. Predict output (Event Loop)
-134. Predict output (this)
-135. Predict output (Prototype)
-136. Predict output (Hoisting)
-137. Predict output (Classes)
-138. Predict output (Async/Await)
-139. Predict output (Generators)
-140. Predict output (Array methods)
+--------------------------------------------------------------------------------
+3.2 HARD - DOM COMPONENTS, COMPLEX APPS & FRAMEWORKS
+--------------------------------------------------------------------------------
+[Mini frontend frameworks, complete productivity applications, and recursive file explorers]
 
-Round 9 – Advanced Machine Coding
-
+125. Infinite Pagination.
+126. Chat UI.
+127. Notification Center.
+128. Calendar Slot Booking.
+129. Poll System.
+130. Voting App.
+131. Nested Comments
+132. Kanban Board
+133. Build Google Keep.
+134. Build Trello.
+135. Build Jira Board.
+136. Build Gmail Sidebar.
+137. Build VS Code File Explorer.
+138. Build File Manager.
+139. Build JSON Editor.
+140. Build Organization Chart.
 141. Build Virtual DOM.
 142. Build Tiny React State.
 143. Build Redux Store.
@@ -184,3 +217,5 @@ Round 9 – Advanced Machine Coding
 148. Build Custom Hooks Library (Vanilla JS).
 149. Build Tiny Template Engine.
 150. Build Tiny Frontend Framework.
+
+================================================================================

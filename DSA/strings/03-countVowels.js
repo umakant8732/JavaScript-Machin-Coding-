@@ -18,9 +18,16 @@
  */
 
 function countVowels(str) {
-    // Write your code here
+    let counter = 0;
+    let vowels = 'aeiouAEIOU'
+    for (let i = 0; i <= str.length - 1; i++) {
+        if (vowels.includes(str.charAt(i))) {
+            counter++
+        }
+    }
+    return counter
 }
 
 console.log(countVowels("hello"));      // Expected: 2
-console.log(countVowels("JavaScript")); // Expected: 3
+console.log(countVowels("JavaScriptaaaa")); // Expected: 3
 console.log(countVowels("xyz"));        // Expected: 0
