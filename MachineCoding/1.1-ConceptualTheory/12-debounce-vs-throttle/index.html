@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debounce vs Throttle Interactive</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: radial-gradient(circle at top, #111, #000);
+            color: #e5e7eb;
+            min-height: 100vh;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .container {
+            width: 100%;
+            max-width: 900px;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+        h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #a78bfa, #3b82f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        .card-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+        }
+        .counter-badge {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 0.2rem 0.6rem;
+            border-radius: 99px;
+            font-size: 0.8rem;
+        }
+        input {
+            width: 100%;
+            background: rgba(0,0,0,0.4);
+            border: 1px solid rgba(255,255,255,0.1);
+            color: #fff;
+            padding: 0.8rem 1.2rem;
+            border-radius: 12px;
+            font-family: inherit;
+            outline: none;
+        }
+        input:focus {
+            border-color: #8b5cf6;
+        }
+        .btn-trigger {
+            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+            border: none;
+            color: #fff;
+            padding: 1rem;
+            border-radius: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .btn-trigger:hover {
+            opacity: 0.9;
+        }
+        .timeline {
+            flex: 1;
+            background: rgba(0,0,0,0.3);
+            border-radius: 12px;
+            padding: 1rem;
+            height: 150px;
+            overflow-y: auto;
+            font-family: monospace;
+            font-size: 0.8rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+        }
+        .timeline-log {
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            background: rgba(255,255,255,0.02);
+        }
+    </style>
+</head>
+<body>
+    <h1>Debounce vs Throttle</h1>
+    <div class="container">
+        <div class="grid">
+            <!-- Debounce Section -->
+            <div class="card">
+                <div class="card-title">
+                    <span>Debouncing (Search Input)</span>
+                    <span class="counter-badge" id="debounce-count">Triggers: 0</span>
+                </div>
+                <p style="font-size: 0.85rem; color: #9ca3af;">Debounce waits for a delay (e.g. 500ms) of silence/inactivity before execution. Useful for Search inputs.</p>
+                <input type="text" id="debounce-input" placeholder="Type here to search...">
+                <div class="timeline" id="debounce-logs"></div>
+            </div>
+
+            <!-- Throttle Section -->
+            <div class="card">
+                <div class="card-title">
+                    <span>Throttling (Button Clicking)</span>
+                    <span class="counter-badge" id="throttle-count">Triggers: 0</span>
+                </div>
+                <p style="font-size: 0.85rem; color: #9ca3af;">Throttle runs the function immediately, then blocks execution for a lock delay (e.g. 1000ms). Useful for clicks/resizes.</p>
+                <button class="btn-trigger" id="throttle-btn">Click Rapidly!</button>
+                <div class="timeline" id="throttle-logs"></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

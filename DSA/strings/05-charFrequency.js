@@ -18,23 +18,15 @@
  */
 
 function charFrequency(str) {
-
     const result = {}
-
     for (let i = 0; i < str.length; i++) {
-
         let char = str[i]
-
         if (!result.hasOwnProperty(str[i])) {
             result[char] = 0
         }
-
         result[char]++
-
     }
-
     return result
-
 }
 
 console.log(charFrequency("hello"));       // Expected: { h: 1, e: 1, l: 2, o: 1 }

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubbling vs Capturing</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: radial-gradient(circle at top, #111827, #030712);
+            color: #f3f4f6;
+            min-height: 100vh;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .container {
+            width: 100%;
+            max-width: 800px;
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #3b82f6, #60a5fa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .playground {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        /* Nested boxes for events */
+        .box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        #grandparent {
+            width: 280px;
+            height: 280px;
+            background: rgba(59, 130, 246, 0.1);
+            border: 2px solid #3b82f6;
+            color: #3b82f6;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 15px;
+            position: relative;
+        }
+        #parent {
+            width: 200px;
+            height: 200px;
+            background: rgba(16, 185, 129, 0.1);
+            border: 2px solid #10b981;
+            color: #10b981;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 15px;
+            position: absolute;
+            top: 15px;
+        }
+        #child {
+            width: 120px;
+            height: 120px;
+            background: rgba(239, 68, 68, 0.1);
+            border: 2px solid #ef4444;
+            color: #ef4444;
+            position: absolute;
+            top: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .log-section {
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            height: 350px;
+        }
+        .log-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        .log-title {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #9ca3af;
+        }
+        .btn-clear {
+            background: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            color: #9ca3af;
+            padding: 0.3rem 0.6rem;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .btn-clear:hover {
+            background: rgba(255,255,255,0.05);
+            color: #fff;
+        }
+        #logs {
+            flex: 1;
+            overflow-y: auto;
+            font-family: monospace;
+            font-size: 0.85rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        .log-entry {
+            padding: 0.4rem 0.6rem;
+            border-radius: 6px;
+            background: rgba(255,255,255,0.03);
+            border-left: 3px solid #6b7280;
+        }
+        .log-grandparent { border-left-color: #3b82f6; color: #60a5fa; }
+        .log-parent { border-left-color: #10b981; color: #34d399; }
+        .log-child { border-left-color: #ef4444; color: #f87171; }
+        
+        .controls {
+            margin-top: 1.5rem;
+            display: flex;
+            gap: 1.5rem;
+        }
+        label {
+            font-size: 0.85rem;
+            color: #9ca3af;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Event Bubbling vs Capturing</h1>
+    <div class="container">
+        <div class="playground">
+            <div id="grandparent" class="box">
+                <div id="parent" class="box">
+                    <div id="child" class="box">
+                        <span class="label">Child</span>
+                    </div>
+                    <span class="label">Parent</span>
+                </div>
+                <span class="label">Grandparent</span>
+            </div>
+
+            <div class="controls">
+                <label>
+                    <input type="checkbox" id="chk-capture">
+                    Use Event Capturing (trickle down)
+                </label>
+                <label>
+                    <input type="checkbox" id="chk-stop">
+                    stopPropagation() on Parent
+                </label>
+            </div>
+        </div>
+
+        <div class="log-section">
+            <div class="log-header">
+                <span class="log-title">Execution Event Log</span>
+                <button class="btn-clear" id="btn-clear-logs">Clear</button>
+            </div>
+            <div id="logs">
+                <div class="log-entry" style="color: #6b7280;">Click inside nested boxes to trigger events...</div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

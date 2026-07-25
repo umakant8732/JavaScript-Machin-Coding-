@@ -1,811 +1,617 @@
 ================================================================================
-PROCODRR 21-DAY SYLLABUS - DSA PREPARATION ROADMAP FOR MERN DEVELOPERS
+TOPGREP TECH - DSA PREPARATION ROADMAP FOR MERN DEVELOPERS (108 TOP QUESTIONS)
 ================================================================================
 
-This roadmap is built exactly around the ProCodrr 21 Days of Problem Solving course.
-It contains 150 questions (30 per topic: 15 Easy, 15 Medium) covering basic logic, 
-digits, strings, arrays, sorting, searching, recursion, trees, and BSTs.
+This topic-wise roadmap is structured to prepare you for JavaScript and fullstack 
+MERN interviews by gradually building logic from absolute basics up to intermediate levels.
+It contains 108 high-yield questions categorized into 7 core topics.
 
 Each question contains:
 - Required Algorithm/Pattern
-- Reasoning (Why) explaining its importance for MERN stack developers.
+- Reasoning (Why) explaining its practical application in web and MERN Stack development.
 
 ================================================================================
-TOPIC 1: NUMBERS, MATH, LOGIC & STAR PATTERNS (30 Questions)
-================================================================================
-
-[EASY LEVEL]
-
-1. Count Digits in a Number
-   - Pattern: Arithmetic division / modulo loop
-   - Why: Foundational loop logic for parsing digit lengths without string methods.
-
-2. Sum of Digits of a Number
-   - Pattern: Arithmetic decomposition
-   - Why: Basic accumulation operations showing arithmetic parsing.
-
-3. Reverse a Number
-   - Pattern: Mathematical rebuilding (num * 10 + remainder)
-   - Why: Essential numeric manipulation logic without allocating memory for string casts.
-
-4. Check Palindrome Number
-   - Pattern: Compare original with reversed number
-   - Why: Classic arithmetic validation of symmetry.
-
-5. Check Armstrong Number
-   - Pattern: Digit powers accumulation
-   - Why: Tests loop-based accumulation and power arithmetic logic.
-
-6. Find HCF / GCD of Two Numbers
-   - Pattern: Euclidean algorithm (subtraction/modulo)
-   - Why: Standard recursion/iteration logic for finding largest common divisor.
-
-7. Find LCM of Two Numbers
-   - Pattern: GCD relation formula: (A * B) / GCD(A, B)
-   - Why: Tests mathematical optimizations utilizing precomputed GCDs.
-
-8. Check if a Number is Prime
-   - Pattern: Square root boundary scan (loop up to sqrt(N))
-   - Why: Demonstrates boundary limit optimization (O(sqrt(N)) instead of O(N)).
-
-9. Print Fibonacci Series up to N Terms
-   - Pattern: Iterative state swaps (prev, curr = curr, prev + curr)
-   - Why: Basic progression logic displaying sequential swaps.
-
-10. Check if a Number is Odd/Even without Modulo (%)
-    - Pattern: Bitwise AND (& 1)
-    - Why: Demonstrates bitwise logic which is faster than division/modulo operators.
-
-11. Swap Two Numbers Without a Third Variable
-    - Pattern: Arithmetic additions/subtractions or XOR
-    - Why: Exercises variable value swaps using math references instead of temp stack variables.
-
-12. Print a Square Star Pattern of Size N
-    - Pattern: Nested loops (row & col)
-    - Why: Foundation for rendering grids and matrices in text layouts.
-
-13. Print a Right Triangle Star Pattern of Size N
-    - Pattern: Nested loops with conditional boundaries
-    - Why: Builds basic multi-dimensional index logic.
-
-14. Print an Inverted Right Triangle Star Pattern of Size N
-    - Pattern: Nested loops with decreasing index limits
-    - Why: Teaches logic where inner iteration counts shrink dynamically.
-
-15. Check if a Year is a Leap Year
-    - Pattern: Divisibility check logic (mod 4, 100, 400)
-    - Why: Classic check showing structured boolean branch conditions.
-
-[MEDIUM LEVEL]
-
-16. Prime Factorization of a Number
-    - Pattern: Trial division division loops
-    - Why: Shows dynamic loop boundary reduction by dividing out found factors.
-
-17. Find N-th Fibonacci Number
-    - Pattern: Iterative space-optimized accumulation
-    - Why: Reaches O(N) time and O(1) space instead of recursive exponential complexity.
-
-18. Find All Prime Numbers up to N
-    - Pattern: Sieve of Eratosthenes
-    - Why: Legendary algorithm showing composite number marking, saving redundant loops.
-
-19. Print a Pyramid Star Pattern of Size N
-    - Pattern: Multi-loop row indentation (spaces + stars)
-    - Why: Integrates complex row formatting logic with mathematical spacing.
-
-20. Print a Diamond Star Pattern of Size N
-    - Pattern: Symmetric pattern reflection (increasing then decreasing stars)
-    - Why: Advanced nested-loop logic handling pattern reversals mid-execution.
-
-21. Find HCF / GCD of an Array of Numbers
-    - Pattern: Cumulative GCD scan
-    - Why: Extends binary GCD functions across list elements using array reductions.
-
-22. Find LCM of an Array of Numbers
-    - Pattern: Cumulative LCM scan
-    - Why: Extends binary LCM functions across list elements using array reductions.
-
-23. Convert Decimal Number to Binary Representation
-    - Pattern: Division by 2 stack builder / bitwise shifts
-    - Why: Base-10 to base-2 numeric conversion logic.
-
-24. Convert Binary Number to Decimal Representation
-    - Pattern: Base-2 exponent sum scan
-    - Why: Parsers binaries to return numeric values.
-
-25. Check if a Number is a Perfect Number
-    - Pattern: Divisors summation loop up to N/2
-    - Why: Verifies if proper divisors sum up to the original value.
-
-26. Find All Factors of a Number
-    - Pattern: Loop scan up to sqrt(N) in pairs
-    - Why: Optimizes factor collection in O(sqrt(N)) time.
-
-27. Print a Hollow Square Star Pattern of Size N
-    - Pattern: Nested loops with boundary checks (row == 0 || col == 0, etc.)
-    - Why: Introduces logical OR conditions within grid render loops.
-
-28. Check if a Number is a Happy Number
-    - Pattern: Digit square sum with Floyd's cycle detection
-    - Why: Tracks cyclic repetitions in digit operations using loop sets.
-
-29. Check if a Number is a Harshad Number
-    - Pattern: Sum of digits divisibility check
-    - Why: Divides numbers by their cumulative digit sums to verify integer status.
-
-30. Print Prime Factors of a Number in Sorted Order
-    - Pattern: Factor collection + sorted array insertion
-    - Why: Combines prime factoring loops with data array collation.
-
-================================================================================
-TOPIC 2: STRINGS & SEARCHING (30 Questions)
+TOPIC 1: STRINGS (30 Questions)
 ================================================================================
 
 [EASY LEVEL]
 
-31. Reverse String
-    - Pattern: Two Pointers / In-place swap
-    - Why: Reversing characters from both ends inward requires O(1) extra space and reverses the string in-place.
-    - File: DSA/strings/01-reverseString.js
+1. Reverse String
+   - Pattern: Two Pointers / In-place swap
+   - Why: Reversing characters from both ends inward requires O(1) extra space and reverses the string in-place.
+   - File: DSA/strings/01-reverseString.js
 
-32. Check Palindrome
-    - Pattern: Two Pointers
-    - Why: Moving pointers inward from both ends allows early exit as soon as a mismatch is found.
-    - File: DSA/strings/02-checkPalindrome.js
+2. Check Palindrome
+   - Pattern: Two Pointers
+   - Why: Moving pointers inward from both ends allows early exit as soon as a mismatch is found.
+   - File: DSA/strings/02-checkPalindrome.js
 
-33. Count Vowels
-    - Pattern: Iteration / Character Set Matching
-    - Why: Scanning the string against a set of vowels identifies occurrences in O(N) time.
-    - File: DSA/strings/03-countVowels.js
+3. Count Vowels
+   - Pattern: Iteration / Character Set Matching
+   - Why: Scanning the string against a set of vowels identifies occurrences in O(N) time.
+   - File: DSA/strings/03-countVowels.js
 
-34. Count Consonants
-    - Pattern: Iteration / Filter
-    - Why: Filters out vowels and special characters, scanning only alphabetic consonants in O(N) time.
-    - File: DSA/strings/04-countConsonants.js
+4. Count Consonants
+   - Pattern: Iteration / Filter
+   - Why: Filters out vowels and special characters, scanning only alphabetic consonants in O(N) time.
+   - File: DSA/strings/04-countConsonants.js
 
-35. Character Frequency
-    - Pattern: Hash Map / Frequency Array
-    - Why: A Hash Map provides O(1) lookup and insertions, ideal for tracking character occurrences.
-    - File: DSA/strings/05-charFrequency.js
+5. Character Frequency
+   - Pattern: Hash Map / Frequency Array
+   - Why: A Hash Map provides O(1) lookup and insertions, ideal for tracking character occurrences.
+   - File: DSA/strings/05-charFrequency.js
 
-36. Remove Duplicate Characters from String
-    - Pattern: Hash Set / Filter
-    - Why: A Set inherently holds unique values, filtering out duplicate entries in O(N) time.
+6. Remove Duplicate Characters
+   - Pattern: Hash Set / Filter
+   - Why: A Set inherently holds unique values, filtering out duplicate entries in O(N) time.
 
-37. Capitalize First Letter of Each Word
-    - Pattern: String manipulation / Word Boundary scanning
-    - Why: Iterating and uppercase-matching characters after space boundaries cleans input.
+7. Capitalize First Letter of Each Word
+   - Pattern: String manipulation / Word Boundary scanning
+   - Why: Iterating and uppercase-matching characters after space boundaries cleans input.
 
-38. String Rotation Check
-    - Pattern: Concatenation ((A + A).includes(B))
-    - Why: If string B is a rotation of A, it must be a substring of A concatenated with itself.
+8. String Rotation Check
+   - Pattern: Concatenation ((A + A).includes(B))
+   - Why: If string B is a rotation of A, it must be a substring of A concatenated with itself.
 
-39. First Repeating Character in a String
-    - Pattern: Hash Set
-    - Why: Checking elements while iterating allows immediate detection of the first duplicate.
+9. First Repeating Character in a String
+   - Pattern: Hash Set
+   - Why: Checking elements while iterating allows immediate detection of the first duplicate.
 
-40. First Non-Repeating Character in a String
+10. First Non-Repeating Character in a String
     - Pattern: Hash Map (Two-pass tracking)
     - Why: First pass builds counts; second pass retrieves the first character with a frequency count of 1.
 
-41. Remove All Spaces from a String
+11. Remove All Spaces from a String
     - Pattern: Iteration filter / RegExp replace
     - Why: Cleans and matches characters by stripping whitespaces.
 
-42. Check if String Contains Only Digits
+12. Check if String Contains Only Digits
     - Pattern: Char-code boundary scan / RegExp test
     - Why: Validates numerical inputs on forms/text fields.
 
-43. Linear Search: Find Index of Character in String
-    - Pattern: Linear Scan
-    - Why: Iterates index by index to locate target, exiting early on first match.
+13. Valid Anagram Check (Easy Version)
+    - Pattern: Character counting in a single loop
+    - Why: Verifies matching character lengths and counts in a simple hash map.
 
-44. Count Occurrences of a Specific Character
-    - Pattern: Linear accumulation scan
-    - Why: Traverses character indices, counting specific character matches.
+14. Check if String is Subsequence of Another
+    - Pattern: Two Pointers
+    - Why: Checks if characters of string A appear in string B in the same order, using two index pointers.
 
-45. FizzBuzz String Compilation
-    - Pattern: Conditional iteration loop
-    - Why: Compiles numeric matches to specific text strings for output sequences.
+15. Count Occurrences of a Substring
+    - Pattern: Sliding window / Index scan with indexOf
+    - Why: Iteratively scans the main string to tally occurrences of a specific substring.
 
 [MEDIUM LEVEL]
 
-46. Longest Substring Without Repeating Characters
+16. Longest Substring Without Repeating Characters
     - Pattern: Sliding Window (Set/Map)
     - Why: Dynamically slides the window to expand for valid substrings and shrinks from the left on duplicates.
 
-47. Longest Palindromic Substring
+17. Longest Palindromic Substring
     - Pattern: Expand Around Center
     - Why: Expanding outwards from 2N-1 potential centers checks palindromic bounds in O(N^2) time.
 
-48. Valid Parentheses
+18. Valid Parentheses
     - Pattern: Stack
     - Why: Last-in, first-out (LIFO) order matches nested brackets (closing bracket must match last open bracket).
 
-49. String Compression
+19. String Compression
     - Pattern: Two Pointers (Read & Write)
     - Why: In-place editing requires a read pointer to count matches and a write pointer to output the summary.
 
-50. Group Anagrams
+20. Group Anagrams
     - Pattern: Hash Map with Sorted String Keys
     - Why: Sorted representations of anagrams are identical, serving as grouping keys in a map.
 
-51. Roman to Integer
+21. Roman to Integer
     - Pattern: Left-to-Right scanning with Lookahead
     - Why: Sequential addition with lookahead handles subtractions (like IV = 5 - 1).
 
-52. Integer to Roman
+22. Integer to Roman
     - Pattern: Greedy subtraction with value map
     - Why: Maps Roman numbers in descending order, building strings by subtractive compilation.
 
-53. Longest Common Prefix
+23. Longest Common Prefix
     - Pattern: Vertical character scanning
     - Why: Compares indices across all elements, failing immediately upon first mismatch.
 
-54. Valid Anagram
-    - Pattern: Frequency Map comparison
-    - Why: Anagrams must share identical character frequencies, matching count tables in linear time.
-
-55. Binary Search on Sorted Array of Characters
-    - Pattern: Two-pointer divide and conquer (Low, High, Mid)
-    - Why: Excludes half the elements each step to search characters in O(log N) complexity.
-
-56. Find All Occurrence Indices of Pattern in String
-    - Pattern: Sliding window match / Substring scan
-    - Why: Slides matching bounds to collect start indices of custom substrings.
-
-57. Reverse Words in a String
+24. Reverse Words in a String
     - Pattern: Split & Reverse / Two Pointers
     - Why: Reversing word positions while cleaning spaces maintains linear complexity.
 
-58. Isomorphic Strings
+25. Isomorphic Strings
     - Pattern: Double Hash Mapping
     - Why: Maps characters in string A to B and vice versa, verifying a strict 1-to-1 character relation.
 
-59. Validate IP Address
+26. Validate IP Address
     - Pattern: Split blocks + numeric check / Regex
     - Why: Verifies proper syntax of network strings for APIs/databases.
 
-60. String to Integer (atoi)
+27. String to Integer (atoi)
     - Pattern: Sign matching + numeric digit accumulator
     - Why: Implements parser logics for parsing numeric values from leading string data.
 
+28. Minimum Window Substring
+    - Pattern: Sliding Window (Two Pointers)
+    - Why: Contracts left pointer dynamically when a valid window is found to discover minimum length.
+
+29. Longest Repeating Character Replacement
+    - Pattern: Sliding Window (Max Frequency Tracking)
+    - Why: Tracks window size while checking if non-majority characters fit within the allowance (K).
+
+30. Valid Palindrome II
+    - Pattern: Two Pointers with 1-character deletion fallback
+    - Why: Pointers move inwards; on mismatch, checks if skipping either character produces a valid palindrome.
+
 ================================================================================
-TOPIC 3: ARRAYS & SORTING (30 Questions)
+TOPIC 2: ARRAYS (30 Questions)
 ================================================================================
 
 [EASY LEVEL]
 
-61. Reverse Array
+31. Reverse Array
     - Pattern: Two Pointers
     - Why: Swapping elements from ends inward reverses the array in-place in O(N) time.
 
-62. Find Maximum & Minimum Element
+32. Find Maximum & Minimum Element
     - Pattern: Linear Scan
     - Why: Iterating once while maintaining minimum and maximum bounds is optimal.
 
-63. Second Largest Element
+33. Second Largest Element
     - Pattern: Single Pass Tracking
     - Why: Keeps track of current largest and second largest values in O(N) time, avoiding O(N log N) sort.
 
-64. Check if Array is Sorted
+34. Check if Array is Sorted
     - Pattern: Single Pass comparison
     - Why: Compares current element to next element to check non-decreasing order in O(N) time.
 
-65. Remove Duplicates from Sorted Array
+35. Remove Duplicates from Sorted Array
     - Pattern: Two Pointers (Read & Write)
     - Why: Since elements are sorted, duplicate values are adjacent and can be skipped.
 
-66. Move Zeroes
+36. Move Zeroes
     - Pattern: Two Pointers (Write Pointer)
     - Why: Write pointer shifts non-zero items leftwards in order, then fills trailing spots with zero.
 
-67. Contains Duplicate
+37. Contains Duplicate
     - Pattern: Hash Set
     - Why: Instant O(1) set lookup reveals duplicates.
 
-68. Intersection of Two Arrays
+38. Intersection of Two Arrays
     - Pattern: Hash Set
     - Why: Hash Set lookups match items in O(N) time rather than nested checks in O(N^2).
 
-69. Bubble Sort
-    - Pattern: Swap adjacent elements in nested loops
-    - Why: Foundational conceptual sorting showing loop execution. Time: O(N^2), Space: O(1).
+39. Find Prime Numbers in an Array
+    - Pattern: Linear scan + Prime check helper (sqrt boundary)
+    - Why: Filters prime values out of raw number lists using optimized checks.
 
-70. Selection Sort
-    - Pattern: Find minimum element and place at boundary
-    - Why: Simple algorithm minimizing index swaps. Time: O(N^2), Space: O(1).
+40. Separate Even and Odd Numbers in Array (Partitioning)
+    - Pattern: Two Pointers (Left & Right boundary swap)
+    - Why: Places even numbers at start and odd numbers at end in-place in O(N) time.
 
-71. Insertion Sort
-    - Pattern: Build sorted array incrementally
-    - Why: Highly efficient for nearly sorted data arrays. Time: O(N^2), Space: O(1).
+41. Find the Missing Number
+    - Pattern: Math (Sum Formula) / XOR
+    - Why: Summing array elements and comparing to index sums isolates the missing value in O(1) space.
 
-72. Linear Search on Array
-    - Pattern: Index traversal scan
-    - Why: Compares list elements sequentially to find index target.
+42. Squares of a Sorted Array
+    - Pattern: Two Pointers
+    - Why: Since extreme negatives yield large squares, two pointers at opposite ends find items in descending order.
 
-73. Binary Search on Sorted Array
-    - Pattern: Divide and conquer index divisions
-    - Why: Halves searching array boundaries dynamically to search elements in O(log N) time.
+43. Find Pivot Index
+    - Pattern: Prefix Sum (Left vs Right sum)
+    - Why: Calculates running sum comparisons dynamically without recalculating subarray sums.
 
-74. Merge Two Sorted Arrays
+44. Monotonic Array Check
+    - Pattern: Single Pass directional scan
+    - Why: Verifies if array is entirely non-increasing or non-decreasing in O(N) time.
+
+45. Merge Two Sorted Arrays
     - Pattern: Two Pointers
     - Why: Compares the smallest available items of both arrays to build a merged sorted list.
 
-75. Count Occurrences of a Number in Array
-    - Pattern: Linear scan counter / Binary search boundaries
-    - Why: Tallies occurrences of numbers in linear or log time.
-
 [MEDIUM LEVEL]
 
-76. Two Sum
+46. Two Sum
     - Pattern: Hash Map
     - Why: Storing visited numbers allows finding the target complement (target - current) in O(1) time.
 
-77. Three Sum
+47. Three Sum
     - Pattern: Sorting + Two Pointers
     - Why: Sorting groups values to avoid duplicates easily and lets two pointers seek outer bounds.
 
-78. Maximum Subarray (Kadane's Algorithm)
+48. Maximum Subarray (Kadane's Algorithm)
     - Pattern: Dynamic Programming / Greedy
     - Why: Decides at each index whether to add value to running sum or start a new subarray.
 
-79. Merge Intervals
+49. Merge Intervals
     - Pattern: Sorting
     - Why: Sorting intervals by start times ensures overlapping segments are contiguous.
 
-80. Rotate Array
+50. Rotate Array
     - Pattern: Reversal Trick / Auxiliary Space
     - Why: Reversing parts of the array in place handles shift rotations in O(N) time and O(1) space.
 
-81. Sort Colors (Dutch National Flag)
+51. Sort Colors (Dutch National Flag)
     - Pattern: Three Pointers (Low, Mid, High)
     - Why: Low and High pointers act as placement anchors for 0s and 2s, sorting in a single pass.
 
-82. Product of Array Except Self
+52. Product of Array Except Self
     - Pattern: Prefix & Suffix Products
     - Why: Storing cumulative products left and right of an element computes total products in O(N) without division.
 
-83. Majority Element
+53. Majority Element
     - Pattern: Boyer-Moore Voting Algorithm
     - Why: Pairs of differing values are cancelled out, leaving the majority element in O(1) space.
 
-84. Container With Most Water
+54. Container With Most Water
     - Pattern: Two Pointers
     - Why: Moves inward from ends, updating pointers that point to smaller heights.
 
-85. Subarray Sum Equals K
+55. Subarray Sum Equals K
     - Pattern: Prefix Sum + Hash Map
     - Why: Counts target sum matches by searching prefix sum differences (prefix - k) in a map.
 
-86. Maximum Product Subarray
+56. Maximum Product Subarray
     - Pattern: Dynamic Programming (Min-Max Tracking)
     - Why: Stores maximum and minimum values because negative multiplications flip minimums to maximums.
 
-87. Find All Duplicates in Array
+57. Find All Duplicates in Array
     - Pattern: In-Place Marking (Index Sign Swap)
     - Why: Negating values at corresponding indices marks them as visited using the original array space.
 
-88. Search in Rotated Sorted Array
+58. Search in Rotated Sorted Array
     - Pattern: Modified binary search pivot check
     - Why: Determines which half of the rotated array is sorted to target searches in O(log N).
 
-89. Find Peak Element in Array
+59. Find Peak Element in Array
     - Pattern: Binary search binary halves comparison
     - Why: Navigates values looking for boundary peaks in O(log N) time.
 
-90. Sort Array of Objects (Custom Comparator)
+60. Longest Subarray with Sum K
+    - Pattern: Sliding Window (Two Pointers) / Hash Map prefix sum
+    - Why: Dynamically contracts window leftward to isolate the longest array window summing to target.
+
+================================================================================
+TOPIC 3: SEARCHING & SORTING (10 Questions)
+================================================================================
+
+[EASY LEVEL]
+
+61. Linear Search Implementation
+    - Pattern: Index traversal scan
+    - Why: Compares list elements sequentially to find index target.
+
+62. Binary Search Implementation (Iterative & Recursive)
+    - Pattern: Divide and conquer index divisions
+    - Why: Halves searching array boundaries dynamically to search elements in O(log N) time.
+
+63. Bubble Sort Implementation
+    - Pattern: Swap adjacent elements in nested loops
+    - Why: Foundational conceptual sorting showing loop execution. Time: O(N^2), Space: O(1).
+
+64. Selection Sort Implementation
+    - Pattern: Find minimum element and place at boundary
+    - Why: Simple algorithm minimizing index swaps. Time: O(N^2), Space: O(1).
+
+65. Insertion Sort Implementation
+    - Pattern: Build sorted array incrementally
+    - Why: Highly efficient for nearly sorted data arrays. Time: O(N^2), Space: O(1).
+
+[MEDIUM LEVEL]
+
+66. Merge Sort Implementation
+    - Pattern: Divide and Conquer / Recursion
+    - Why: Standard stable sorting algorithm with guaranteed O(N log N) time complexity. Extremely common in theoretical questions.
+
+67. Quick Sort Implementation
+    - Pattern: Divide and Conquer / Pivot partitioning
+    - Why: Most efficient in-practice sorting algorithm (O(N log N) average) illustrating partitioning.
+
+68. Sort Array of Objects (Custom Comparator)
     - Pattern: Array.prototype.sort() with comparison function ((a, b) => a.prop - b.prop)
     - Why: Basic MERN application. You receive an array of objects from the database/API and must sort it by date, name, or price dynamically before rendering.
 
+69. Search in 2D Matrix
+    - Pattern: Coordinate mapping binary search
+    - Why: Flattens 2D matrices conceptually to execute O(log (M * N)) binary search lookups.
+
+70. Find First and Last Position of Element in Sorted Array
+    - Pattern: Double Binary Search bounds
+    - Why: Finds target indices boundaries by scanning mid splits left and right in O(log N) time.
+
 ================================================================================
-TOPIC 4: RECURSION (30 Questions)
+TOPIC 4: LINEAR DATA STRUCTURES - STACK & QUEUE (10 Questions)
 ================================================================================
 
 [EASY LEVEL]
 
-91. Print Numbers from 1 to N
-    - Pattern: Recursive head traversal
-    - Why: Introduces basic base cases and call-stack sequence printings.
+71. Implement Stack using Array
+    - Pattern: Array encapsulation (push/pop)
+    - Why: Explores Last-in, First-out (LIFO) memory structure by wrapping JS native methods.
 
-92. Print Numbers from N to 1
-    - Pattern: Recursive tail traversal
-    - Why: Builds recursive print patterns where outputs are executed before down-calls.
+72. Implement Queue using Array
+    - Pattern: Array encapsulation (push/shift)
+    - Why: Explores First-in, First-out (FIFO) scheduling behavior by wrapping JS native methods.
 
-93. Sum of First N Numbers
-    - Pattern: Recursive accumulation
-    - Why: Accumulates counts recursively back tracking call paths.
+73. Min Stack
+    - Pattern: Stack with Min tracking
+    - Why: Keeps track of the minimum element in the stack in O(1) time using an auxiliary tracking stack.
 
-94. Calculate Factorial of a Number
-    - Pattern: Recursive product tracking
-    - Why: Standard recursion multiplying decreasing indices down to 1.
+74. Implement Stack using Queues
+    - Pattern: Queue element rotation
+    - Why: Simulates LIFO stacks using FIFO queues by shuffling elements inside helper buffers.
 
-95. Find N-th Fibonacci Number
-    - Pattern: Double branch recursion
-    - Why: Introduces overlapping recursion branches (e.g. Fib(N-1) + Fib(N-2)).
+[MEDIUM LEVEL]
 
-96. Reverse a String
-    - Pattern: Recursive character slicing / concatenation
-    - Why: Reverses character strings by shifting head element to tail recursive calls.
+75. Implement Queue using Stacks
+    - Pattern: Two Stacks conversion
+    - Why: Focuses on managing and reversing element orders between LIFO structures to behave as FIFO.
 
-97. Reverse an Array
-    - Pattern: Two pointer swap recursion
-    - Why: Swaps values in recursive scopes by moving bounds inwards.
+76. Next Greater Element
+    - Pattern: Monotonic Stack
+    - Why: Uses a stack to remember indices/elements needing a future larger value, scanning in O(N).
 
-98. Check Palindrome String
-    - Pattern: Boundary character check recursion
-    - Why: Recursively confirms matching start/end characters.
+77. Task Scheduler / Job Queue
+    - Pattern: Queue FIFO scheduling
+    - Why: Simulates asynchronous task processing (like BullMQ, email dispatching queues, or task pools).
 
-99. Sum of Digits of a Number
+78. Simplify Path
+    - Pattern: Unix-like path parsing via Stack
+    - Why: Extremely relevant for backend Node.js path resolutions, cleaning redundant directories/backtracks.
+
+79. Sliding Window Maximum
+    - Pattern: Deque / Monotonic Queue
+    - Why: Optimally tracks sliding window constraint maximums by maintaining indices in a double-ended queue.
+
+80. Check Balanced Parentheses (Multi-Type)
+    - Pattern: Stack parsing
+    - Why: Extends basic brackets verification by checking all brace forms matching pairs.
+
+================================================================================
+TOPIC 5: RECURSION & BACKTRACKING (10 Questions)
+================================================================================
+
+[EASY LEVEL]
+
+81. Print 1 to N and N to 1 Recursively
+    - Pattern: Recursive head/tail traversals
+    - Why: Introduces basic call sequences and trace stack frames.
+
+82. Sum of Digits Recursively
     - Pattern: Modulo + division recursion
     - Why: Accumulates remainder digits down recursive call stack.
 
-100. Product of Two Numbers (Repeated Addition)
-     - Pattern: Additive recursion
-     - Why: Simulates multipliers by adding terms recursively.
+83. Calculate Factorial & Fibonacci Recursively
+    - Pattern: Recursive numeric reductions
+    - Why: Builds basic single and double branched recursion calls.
 
-101. Count Digits of a Number
-     - Pattern: Division recursion
-     - Why: Talls digit count by recursive divisibility steps.
-
-102. Binary Search implementation recursively
-     - Pattern: Recursive bound indices mid splits
-     - Why: Halves searching fields recursively.
-
-103. Check if Array is Sorted
-     - Pattern: Consecutive indices check recursion
-     - Why: Traverses index pairs recursively to check ordering.
-
-104. Calculate X^N (Power Function)
-     - Pattern: Recursive exponent multiplications
-     - Why: Computes power functions recursively.
-
-105. Find Maximum Element in Array
-     - Pattern: Linear recursive reduction
-     - Why: Compares current item against recursion tail minimums.
+84. Power Function (X^N) Recursively
+    - Pattern: Binary division recursion (X^(N/2))
+    - Why: Computes power recursively in O(log N) operations.
 
 [MEDIUM LEVEL]
 
-106. Flatten Nested Array
-     - Pattern: Recursive flat scanning
-     - Why: Solves dynamic nesting in arrays, very common in MERN database integrations.
+85. Flatten a Nested Array Recursively
+    - Pattern: Recursive flat scanning
+    - Why: Resolves deeply nested array structures, mimicking operations commonly done on nested state trees.
 
-107. Flatten Nested Object
-     - Pattern: Recursive object keys resolution
-     - Why: flattens nested state variables into simple key maps.
+86. Flatten a Nested Object Recursively
+    - Pattern: Recursive object keys resolution
+    - Why: flattens nested state variables into simple key maps.
 
-108. Deep Clone Object
-     - Pattern: Recursive reference deep cloning
-     - Why: Clones nested objects by values to protect React immutable state structures.
+87. Deep Clone an Object Recursively
+    - Pattern: Recursive reference deep cloning
+    - Why: Clones nested objects by values to protect React immutable state structures.
 
-109. Search in Nested JSON / Folder Structure
-     - Pattern: Recursive DFS traversal
-     - Why: Models navigation in nested databases or recursive sidebar UI components.
+88. Search in Nested JSON/Folder Structure
+    - Pattern: Recursive DFS traversal
+    - Why: Models navigation in nested databases or recursive sidebar UI components.
 
-110. Power Set (Subsets of Array)
-     - Pattern: Backtracking pick / skip recursion
-     - Why: Computes all possible subsets of lists.
+89. Generate Parentheses Combinations
+    - Pattern: Backtracking bracket counts check
+    - Why: Explores balanced bracket combinations recursively.
 
-111. Generate All Permutations of a String
-     - Pattern: Backtracking swap scans
-     - Why: Searches all ordering possibilities recursively.
-
-112. Generate Parentheses
-     - Pattern: Backtracking bracket counts check
-     - Why: Explores balanced bracket combinations recursively.
-
-113. Climb Stairs
-     - Pattern: Memoized recursion
-     - Why: Demonstrates speed ups using cache maps inside recursive functions.
-
-114. Tower of Hanoi Solver
-     - Pattern: Three rods recursive disc shifts
-     - Why: Classic divide-and-conquer recursion algorithm.
-
-115. Subsequences of a String
-     - Pattern: Recursive pick/skip character additions
-     - Why: Extracts all subsequences of a string recursively.
-
-116. Word Search in Grid
-     - Pattern: Backtracking matrix index shifts
-     - Why: Traverses cells recursively while tracking visited elements.
-
-117. Merge Sort recursive partitioning
-     - Pattern: Divide-and-conquer recursion + sorted merge
-     - Why: Foundations of efficient O(N log N) recursive sorting.
-
-118. Quick Sort recursive partitioning
-     - Pattern: Recursive pivot partitions
-     - Why: In-place recursive sorting using partition indices.
-
-119. Flatten Keys of Object
-     - Pattern: Recursive string path builder
-     - Why: Converts nested keys into string paths (e.g. "a.b.c").
-
-120. Josephus Problem Solver
-     - Pattern: Cyclic index reduction recursion
-     - Why: Classic problem solving elimination checks.
+90. Subsets / Power Set Generation
+    - Pattern: Backtracking pick / skip recursion
+    - Why: Computes all possible subsets of lists.
 
 ================================================================================
-TOPIC 5: TREES & BINARY SEARCH TREES (30 Questions)
+TOPIC 6: TREES & BST (10 Questions)
 ================================================================================
 
 [EASY LEVEL]
 
-121. Create Binary Tree Node Class
-     - Pattern: Class OOP node creation (val, left, right pointers)
-     - Why: Foundations of tree nodes representations in JS.
+91. Tree Node Definition & Traversals (DFS)
+    - Pattern: Recursive Inorder/Preorder/Postorder DFS
+    - Why: Foundation for tree traversal patterns needed to parse, diff, or update HTML DOM trees.
 
-122. Height / Maximum Depth of a Binary Tree
-     - Pattern: DFS recursion (1 + max(left, right))
-     - Why: Finds maximum nesting depth of HTML elements in DOM branches.
+92. Height / Maximum Depth of a Tree
+    - Pattern: DFS recursion (1 + max(left, right))
+    - Why: Finds maximum nesting depth of HTML elements in DOM branches.
 
-123. Count Total Nodes in a Binary Tree
-     - Pattern: DFS count recursion (1 + left + right)
-     - Why: Measures size of elements trees.
+93. Count Leaf Nodes
+    - Pattern: DFS leaf check recursion
+    - Why: Counts endpoint nodes without children.
 
-124. Inorder Traversal of a Binary Tree
-     - Pattern: Recursive Inorder (Left, Node, Right)
-     - Why: Foundations for sequential tree parsing.
+94. Search in a Binary Search Tree (BST)
+    - Pattern: BST node val lookup
+    - Why: Fast O(log N) data tree search applications.
 
-125. Preorder Traversal of a Binary Tree
-     - Pattern: Recursive Preorder (Node, Left, Right)
-     - Why: Foundational tree copy/parsing traversals.
-
-126. Postorder Traversal of a Binary Tree
-     - Pattern: Recursive Postorder (Left, Right, Node)
-     - Why: Foundational tree deletes/computations traversals.
-
-127. Search Value in a Binary Search Tree (BST)
-     - Pattern: BST node val lookup
-     - Why: Fast O(log N) data tree search applications.
-
-128. Find Minimum Value in a BST
-     - Pattern: Leftmost node traversal
-     - Why: Navigates smallest boundary nodes in sorted tree lists.
-
-129. Find Maximum Value in a BST
-     - Pattern: Rightmost node traversal
-     - Why: Navigates largest boundary nodes in sorted tree lists.
-
-130. Insert Node in a BST
-     - Pattern: BST value insertion check
-     - Why: Dynamically structures sorted trees.
-
-131. Count Leaf Nodes in Binary Tree
-     - Pattern: DFS leaf check recursion
-     - Why: Counts endpoint nodes without children.
-
-132. Check if Two Binary Trees are Identical
-     - Pattern: Recursive node validation checks
-     - Why: Verifies structural and value matches in tree structures.
-
-133. Symmetric Tree Check (Mirror Tree)
-     - Pattern: Double recursive mirrors checks
-     - Why: Verifies mirror symmetry in trees.
-
-134. Sum of All Nodes in Binary Tree
-     - Pattern: DFS recursive accumulation
-     - Why: Tallies values across all elements in tree structures.
-
-135. Path Sum Check
-     - Pattern: DFS target subtract scan
-     - Why: Validates if any root-to-leaf path sums to target.
+95. Path Sum Check
+    - Pattern: DFS target subtract scan
+    - Why: Validates if any root-to-leaf path sums to target.
 
 [MEDIUM LEVEL]
 
-136. Level Order Traversal (BFS)
-     - Pattern: Queue FIFO level scan
-     - Why: Traverses horizontal layers, useful for parsing layouts in segments.
+96. Level Order Traversal (BFS)
+    - Pattern: Queue FIFO level scan
+    - Why: Traverses horizontal layers, useful for parsing layouts in segments.
 
-137. Find Node in Duplicate DOM Trees
-     - Pattern: Tree mapping DFS scans
-     - Why: Standard frontend challenge finding matching nodes in copied HTML structures.
+97. Find Node in Matching DOM Trees
+    - Pattern: Tree mapping DFS scans
+    - Why: Standard frontend challenge finding matching nodes in copied HTML structures.
 
-138. Collect Class Names in a DOM Tree
-     - Pattern: DFS recursive match
-     - Why: Simulates browser search selectors like querySelectorAll.
+98. Collect Class Names in DOM Tree
+    - Pattern: DFS recursive match
+    - Why: Simulates browser search selectors like querySelectorAll.
 
-139. Validate if Binary Tree is valid BST
-     - Pattern: Recursion bounds limits checks
-     - Why: Enforces range requirements on tree nodes in O(N).
+99. Validate Binary Search Tree
+    - Pattern: Recursion bounds limits checks
+    - Why: Enforces range requirements on tree nodes in O(N).
 
-140. Lowest Common Ancestor (LCA) in BST
-     - Pattern: BST node value split check
-     - Why: Finds nearest common parent node in sorted trees.
-
-141. Lowest Common Ancestor (LCA) in Binary Tree
-     - Pattern: DFS parent check splits
+100. Lowest Common Ancestor (LCA) in Tree/BST
+     - Pattern: DFS recursion / BST splits
      - Why: Locates common parents in nested systems or directory structures.
 
-142. Delete Node in a BST
-     - Pattern: BST node shifts + replacement logic
-     - Why: Safely handles element drops in sorted trees.
+================================================================================
+TOPIC 7: LINKED LISTS (8 Questions)
+================================================================================
 
-143. Convert Sorted Array to Balanced BST
-     - Pattern: Recursive mid element split inserts
-     - Why: Transforms arrays into fast balanced lookups trees.
+[EASY LEVEL]
 
-144. Right Side View of Binary Tree
-     - Pattern: Queue BFS / DFS tracking right node
-     - Why: Extracts visible rightmost elements in tree layouts.
+101. Reverse a Linked List
+     - Pattern: Iterative / Three Pointers
+     - Why: Essential practice for manipulating node reference links (next pointers) dynamically.
 
-145. Left Side View of Binary Tree
-     - Pattern: Queue BFS / DFS tracking left node
-     - Why: Extracts visible leftmost elements in tree layouts.
+102. Detect Loop in a Linked List
+     - Pattern: Floyd's Cycle / Fast-Slow Pointers
+     - Why: Fast pointer catches slow pointer in O(N) time if a cycle reference exists.
 
-146. Check if Binary Tree is Balanced
-     - Pattern: Recursive height checking splits
-     - Why: Validates balance height constraints to ensure O(log N) operations.
+103. Find Middle of a Linked List
+     - Pattern: Fast & Slow Pointers
+     - Why: Solves single-pass midpoints by stepping fast pointer twice as fast as slow pointer.
 
-147. Zigzag Level Order Traversal
-     - Pattern: Queue BFS + level arrays reversals
-     - Why: Alternates scanning directions across tree layers.
+104. Delete Node in a Linked List
+     - Pattern: Value substitution + skip node
+     - Why: Deletes node in O(1) when given reference without traversing head.
 
-148. Diameter of a Binary Tree
-     - Pattern: DFS height calculations + max tracker
-     - Why: Finds longest node path in tree networks.
+[MEDIUM LEVEL]
 
-149. Count Subtrees that Sum to Target
-     - Pattern: DFS sum check recursion
-     - Why: Counts all local tree structures matching sums limits.
+105. Merge Two Sorted Linked Lists
+     - Pattern: Two Pointers
+     - Why: Chains nodes of two sorted lists in-place in sorting order without allocation.
 
-150. Flatten Binary Tree to Linked List
-     - Pattern: In-place pointer modifications recursion
-     - Why: Flattens hierarchical data trees into sequential lists.
+106. Remove N-th Node From End
+     - Pattern: Two Pointers with Delay gap
+     - Why: Pushes lead pointer N steps ahead, then moves both to find deletion targets in a single scan.
+
+107. Add Two Numbers represented as Linked Lists
+     - Pattern: Math carry scan
+     - Why: Mimics arithmetic additions on reference arrays, tracking carry overflows.
+
+108. Intersection of Two Linked Lists
+     - Pattern: Difference in lengths offset / Two Pointers swap
+     - Why: Aligns list lengths to find meeting reference nodes in O(N) time.
 
 ================================================================================
 PROGRESS TRACKER
 ================================================================================
-[x] Q31: Reverse String
-[x] Q32: Check Palindrome
-[x] Q33: Count Vowels
-[x] Q34: Count Consonants
-[ ] Q1: Count Digits in a Number
-[ ] Q2: Sum of Digits of a Number
-[ ] Q3: Reverse a Number
-[ ] Q4: Check Palindrome Number
-[ ] Q5: Check Armstrong Number
-[ ] Q6: Find HCF / GCD of Two Numbers
-[ ] Q7: Find LCM of Two Numbers
-[ ] Q8: Check if a Number is Prime
-[ ] Q9: Print Fibonacci Series up to N Terms
-[ ] Q10: Check if a Number is Odd/Even without Modulo (%)
-[ ] Q11: Swap Two Numbers Without a Third Variable
-[ ] Q12: Print a Square Star Pattern of Size N
-[ ] Q13: Print a Right Triangle Star Pattern of Size N
-[ ] Q14: Print an Inverted Right Triangle Star Pattern of Size N
-[ ] Q15: Check if a Year is a Leap Year
-[ ] Q16: Prime Factorization of a Number
-[ ] Q17: Find N-th Fibonacci Number
-[ ] Q18: Find All Prime Numbers up to N
-[ ] Q19: Print a Pyramid Star Pattern of Size N
-[ ] Q20: Print a Diamond Star Pattern of Size N
-[ ] Q21: Find HCF / GCD of an Array of Numbers
-[ ] Q22: Find LCM of an Array of Numbers
-[ ] Q23: Convert Decimal Number to Binary Representation
-[ ] Q24: Convert Binary Number to Decimal Representation
-[ ] Q25: Check if a Number is a Perfect Number
-[ ] Q26: Find All Factors of a Number
-[ ] Q27: Print a Hollow Square Star Pattern of Size N
-[ ] Q28: Check if a Number is a Happy Number
-[ ] Q29: Check if a Number is a Harshad Number
-[ ] Q30: Print Prime Factors of a Number in Sorted Order
-[ ] Q35: Character Frequency
-[ ] Q36: Remove Duplicate Characters from String
-[ ] Q37: Capitalize First Letter of Each Word
-[ ] Q38: String Rotation Check
-[ ] Q39: First Repeating Character in a String
-[ ] Q40: First Non-Repeating Character in a String
-[ ] Q41: Remove All Spaces from a String
-[ ] Q42: Check if String Contains Only Digits
-[ ] Q43: Linear Search: Find Index of Character in String
-[ ] Q44: Count Occurrences of a Specific Character
-[ ] Q45: FizzBuzz String Compilation
-[ ] Q46: Longest Substring Without Repeating Characters
-[ ] Q47: Longest Palindromic Substring
-[ ] Q48: Valid Parentheses
-[ ] Q49: String Compression
-[ ] Q50: Group Anagrams
-[ ] Q51: Roman to Integer
-[ ] Q52: Integer to Roman
-[ ] Q53: Longest Common Prefix
-[ ] Q54: Valid Anagram
-[ ] Q55: Binary Search on Sorted Array of Characters
-[ ] Q56: Find All Occurrence Indices of Pattern in String
-[ ] Q57: Reverse Words in a String
-[ ] Q58: Isomorphic Strings
-[ ] Q59: Validate IP Address
-[ ] Q60: String to Integer (atoi)
-[ ] Q61: Reverse Array
-[ ] Q62: Find Maximum & Minimum Element
-[ ] Q63: Second Largest Element
-[ ] Q64: Check if Array is Sorted
-[ ] Q65: Remove Duplicates from Sorted Array
-[ ] Q66: Move Zeroes
-[ ] Q67: Contains Duplicate
-[ ] Q68: Intersection of Two Arrays
-[ ] Q69: Bubble Sort
-[ ] Q70: Selection Sort
-[ ] Q71: Insertion Sort
-[ ] Q72: Linear Search on Array
-[ ] Q73: Binary Search on Sorted Array
-[ ] Q74: Merge Two Sorted Arrays
-[ ] Q75: Count Occurrences of a Number in Array
-[ ] Q76: Two Sum
-[ ] Q77: Three Sum
-[ ] Q78: Maximum Subarray (Kadane's Algorithm)
-[ ] Q79: Merge Intervals
-[ ] Q80: Rotate Array
-[ ] Q81: Sort Colors (Dutch National Flag)
-[ ] Q82: Product of Array Except Self
-[ ] Q83: Majority Element
-[ ] Q84: Container With Most Water
-[ ] Q85: Subarray Sum Equals K
-[ ] Q86: Maximum Product Subarray
-[ ] Q87: Find All Duplicates in Array
-[ ] Q88: Search in Rotated Sorted Array
-[ ] Q89: Find Peak Element in Array
-[ ] Q90: Sort Array of Objects (Custom Comparator)
-[ ] Q91: Print Numbers from 1 to N
-[ ] Q92: Print Numbers from N to 1
-[ ] Q93: Sum of First N Numbers
-[ ] Q94: Calculate Factorial of a Number
-[ ] Q95: Find N-th Fibonacci Number
-[ ] Q96: Reverse a String
-[ ] Q97: Reverse an Array
-[ ] Q98: Check Palindrome String
-[ ] Q99: Sum of Digits of a Number
-[ ] Q100: Product of Two Numbers (Repeated Addition)
-[ ] Q101: Count Digits of a Number
-[ ] Q102: Binary Search implementation recursively
-[ ] Q103: Check if Array is Sorted
-[ ] Q104: Calculate X^N (Power Function)
-[ ] Q105: Find Maximum Element in Array
-[ ] Q106: Flatten Nested Array
-[ ] Q107: Flatten Nested Object
-[ ] Q108: Deep Clone Object
-[ ] Q109: Search in Nested JSON / Folder Structure
-[ ] Q110: Power Set (Subsets of Array)
-[ ] Q111: Generate All Permutations of a String
-[ ] Q112: Generate Parentheses
-[ ] Q113: Climb Stairs
-[ ] Q114: Tower of Hanoi Solver
-[ ] Q115: Subsequences of a String
-[ ] Q116: Word Search in Grid
-[ ] Q117: Merge Sort recursive partitioning
-[ ] Q118: Quick Sort recursive partitioning
-[ ] Q119: Flatten Keys of Object
-[ ] Q120: Josephus Problem Solver
-[ ] Q121: Create Binary Tree Node Class
-[ ] Q122: Height / Maximum Depth of a Binary Tree
-[ ] Q123: Count Total Nodes in a Binary Tree
-[ ] Q124: Inorder Traversal of a Binary Tree
-[ ] Q125: Preorder Traversal of a Binary Tree
-[ ] Q126: Postorder Traversal of a Binary Tree
-[ ] Q127: Search Value in a Binary Search Tree (BST)
-[ ] Q128: Find Minimum Value in a BST
-[ ] Q129: Find Maximum Value in a BST
-[ ] Q130: Insert Node in a BST
-[ ] Q131: Count Leaf Nodes in Binary Tree
-[ ] Q132: Check if Two Binary Trees are Identical
-[ ] Q133: Symmetric Tree Check (Mirror Tree)
-[ ] Q134: Sum of All Nodes in Binary Tree
-[ ] Q135: Path Sum Check
-[ ] Q136: Level Order Traversal (BFS)
-[ ] Q137: Find Node in Duplicate DOM Trees
-[ ] Q138: Collect Class Names in a DOM Tree
-[ ] Q139: Validate if Binary Tree is valid BST
-[ ] Q140: Lowest Common Ancestor (LCA) in BST
-[ ] Q141: Lowest Common Ancestor (LCA) in Binary Tree
-[ ] Q142: Delete Node in a BST
-[ ] Q143: Convert Sorted Array to Balanced BST
-[ ] Q144: Right Side View of Binary Tree
-[ ] Q145: Left Side View of Binary Tree
-[ ] Q146: Check if Binary Tree is Balanced
-[ ] Q147: Zigzag Level Order Traversal
-[ ] Q148: Diameter of a Binary Tree
-[ ] Q149: Count Subtrees that Sum to Target
-[ ] Q150: Flatten Binary Tree to Linked List
+[x] Q1: Reverse String
+[x] Q2: Check Palindrome
+[x] Q3: Count Vowels
+[x] Q4: Count Consonants
+[x] Q5: Character Frequency
+[x] Q6: Remove Duplicate Characters
+[x] Q7: Capitalize First Letter of Each Word
+[x] Q8: String Rotation Check
+[x] Q9: First Repeating Character in a String
+[x] Q10: First Non-Repeating Character in a String
+[x] Q11: Remove All Spaces from a String
+[ ] Q12: Check if String Contains Only Digits
+[ ] Q13: Valid Anagram Check (Easy Version)
+[ ] Q14: Check if String is Subsequence of Another
+[ ] Q15: Count Occurrences of a Substring
+[ ] Q16: Longest Substring Without Repeating Characters
+[ ] Q17: Longest Palindromic Substring
+[ ] Q18: Valid Parentheses
+[ ] Q19: String Compression
+[ ] Q20: Group Anagrams
+[ ] Q21: Roman to Integer
+[ ] Q22: Integer to Roman
+[ ] Q23: Longest Common Prefix
+[ ] Q24: Reverse Words in a String
+[ ] Q25: Isomorphic Strings
+[ ] Q26: Validate IP Address
+[ ] Q27: String to Integer (atoi)
+[ ] Q28: Minimum Window Substring
+[ ] Q29: Longest Repeating Character Replacement
+[ ] Q30: Valid Palindrome II
+[ ] Q31: Reverse Array
+[ ] Q32: Find Maximum & Minimum Element
+[ ] Q33: Second Largest Element
+[ ] Q34: Check if Array is Sorted
+[ ] Q35: Remove Duplicates from Sorted Array
+[ ] Q36: Move Zeroes
+[ ] Q37: Contains Duplicate
+[ ] Q38: Intersection of Two Arrays
+[ ] Q39: Find Prime Numbers in an Array
+[ ] Q40: Separate Even and Odd Numbers in Array (Partitioning)
+[ ] Q41: Find the Missing Number
+[ ] Q42: Squares of a Sorted Array
+[ ] Q43: Find Pivot Index
+[ ] Q44: Monotonic Array Check
+[ ] Q45: Merge Two Sorted Arrays
+[ ] Q46: Two Sum
+[ ] Q47: Three Sum
+[ ] Q48: Maximum Subarray (Kadane's Algorithm)
+[ ] Q49: Merge Intervals
+[ ] Q50: Rotate Array
+[ ] Q51: Sort Colors (Dutch National Flag)
+[ ] Q52: Product of Array Except Self
+[ ] Q53: Majority Element
+[ ] Q54: Container With Most Water
+[ ] Q55: Subarray Sum Equals K
+[ ] Q56: Maximum Product Subarray
+[ ] Q57: Find All Duplicates in Array
+[ ] Q58: Search in Rotated Sorted Array
+[ ] Q59: Find Peak Element in Array
+[ ] Q60: Longest Subarray with Sum K
+[ ] Q61: Linear Search Implementation
+[ ] Q62: Binary Search Implementation (Iterative & Recursive)
+[ ] Q63: Bubble Sort Implementation
+[ ] Q64: Selection Sort Implementation
+[ ] Q65: Insertion Sort Implementation
+[ ] Q66: Merge Sort Implementation
+[ ] Q67: Quick Sort Implementation
+[ ] Q68: Sort Array of Objects (Custom Comparator)
+[ ] Q69: Search in 2D Matrix
+[ ] Q70: Find First and Last Position of Element in Sorted Array
+[ ] Q71: Implement Stack using Array
+[ ] Q72: Implement Queue using Array
+[ ] Q73: Min Stack
+[ ] Q74: Implement Stack using Queues
+[ ] Q75: Implement Queue using Stacks
+[ ] Q76: Next Greater Element
+[ ] Q77: Task Scheduler / Job Queue
+[ ] Q78: Simplify Path
+[ ] Q79: Sliding Window Maximum
+[ ] Q80: Check Balanced Parentheses (Multi-Type)
+[ ] Q81: Print 1 to N and N to 1 Recursively
+[ ] Q82: Sum of Digits Recursively
+[ ] Q83: Calculate Factorial & Fibonacci Recursively
+[ ] Q84: Power Function (X^N) Recursively
+[ ] Q85: Flatten a Nested Array Recursively
+[ ] Q86: Flatten a Nested Object Recursively
+[ ] Q87: Deep Clone an Object Recursively
+[ ] Q88: Search in Nested JSON/Folder Structure
+[ ] Q89: Generate Parentheses Combinations
+[ ] Q90: Subsets / Power Set Generation
+[ ] Q91: Tree Node Definition & Traversals (DFS)
+[ ] Q92: Height / Maximum Depth of a Tree
+[ ] Q93: Count Leaf Nodes
+[ ] Q94: Search in a Binary Search Tree (BST)
+[ ] Q95: Path Sum Check
+[ ] Q96: Level Order Traversal (BFS)
+[ ] Q97: Find Node in Matching DOM Trees
+[ ] Q98: Collect Class Names in DOM Tree
+[ ] Q99: Validate Binary Search Tree
+[ ] Q100: Lowest Common Ancestor (LCA) in Tree/BST
+[ ] Q101: Reverse a Linked List
+[ ] Q102: Detect Loop in a Linked List
+[ ] Q103: Find Middle of a Linked List
+[ ] Q104: Delete Node in a Linked List
+[ ] Q105: Merge Two Sorted Linked Lists
+[ ] Q106: Remove N-th Node From End
+[ ] Q107: Add Two Numbers represented as Linked Lists
+[ ] Q108: Intersection of Two Linked Lists
 ================================================================================
