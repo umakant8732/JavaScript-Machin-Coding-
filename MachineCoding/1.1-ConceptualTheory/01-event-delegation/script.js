@@ -21,6 +21,7 @@ taskAddButton.addEventListener('click', (e) => {
     li.className = 'task-item'
 
     const span = document.createElement('span')
+    // span.innerHTML = taskText never do this one
     span.textContent = taskText
 
     const deleteButton = document.createElement('button')
@@ -37,9 +38,9 @@ taskAddButton.addEventListener('click', (e) => {
 
 taskList.addEventListener('click', (e) => {
 
-    if(e.target.classList.contains('btn-delete')){
+    if (e.target.classList.contains('btn-delete')) {
         e.target.parentElement.remove()
-    }   
+    }
 })
 
 
