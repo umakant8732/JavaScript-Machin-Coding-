@@ -517,10 +517,10 @@ PROGRESS TRACKER
 [x] Q9: First Repeating Character in a String
 [x] Q10: First Non-Repeating Character in a String
 [x] Q11: Remove All Spaces from a String
-[ ] Q12: Check if String Contains Only Digits
-[ ] Q13: Valid Anagram Check (Easy Version)
-[ ] Q14: Check if String is Subsequence of Another
-[ ] Q15: Count Occurrences of a Substring
+[x] Q12: Check if String Contains Only Digits
+[x] Q13: Valid Anagram Check (Easy Version)
+[x] Q14: Check if String is Subsequence of Another
+[x] Q15: Count Occurrences of a Substring
 [ ] Q16: Longest Substring Without Repeating Characters
 [ ] Q17: Longest Palindromic Substring
 [ ] Q18: Valid Parentheses
