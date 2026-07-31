@@ -3,4 +3,9 @@
  * Build counts object, then find first character with count 1.
  */
 
-// Write your code here
+function firstNonRepeatingChar(str) {
+    // Write your code here
+}
+
+console.log(firstNonRepeatingChar("hello")); // Expected: "h"
+console.log(firstNonRepeatingChar("aabbc")); // Expected: "c"

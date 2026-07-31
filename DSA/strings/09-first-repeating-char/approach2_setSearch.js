@@ -3,4 +3,9 @@
  * Check if character is already in a Set.
  */
 
-// Write your code here
+function firstRepeatingChar(str) {
+    // Write your code here
+}
+
+console.log(firstRepeatingChar("hello")); // Expected: "l"
+console.log(firstRepeatingChar("abcde")); // Expected: null

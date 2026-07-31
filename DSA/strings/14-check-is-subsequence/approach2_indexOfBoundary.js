@@ -3,4 +3,9 @@
  * Search using indexOf with start index shift.
  */
 
-// Write your code here
+function isSubsequence(s, t) {
+    // Write your code here
+}
+
+console.log(isSubsequence("abc", "ahbgdc")); // Expected: true
+console.log(isSubsequence("axc", "ahbgdc")); // Expected: false

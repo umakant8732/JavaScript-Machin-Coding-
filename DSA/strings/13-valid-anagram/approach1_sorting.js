@@ -3,4 +3,9 @@
  * Sort characters of both strings and compare.
  */
 
-// Write your code here
+function isAnagram(s, t) {
+    // Write your code here
+}
+
+console.log(isAnagram("anagram", "nagaram")); // Expected: true
+console.log(isAnagram("rat", "car"));         // Expected: false

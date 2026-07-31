@@ -3,4 +3,9 @@
  * Tally counts in object, subtract, and validate.
  */
 
-// Write your code here
+function isAnagram(s, t) {
+    // Write your code here
+}
+
+console.log(isAnagram("anagram", "nagaram")); // Expected: true
+console.log(isAnagram("rat", "car"));         // Expected: false

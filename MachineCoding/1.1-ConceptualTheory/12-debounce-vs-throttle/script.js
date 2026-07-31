@@ -1,37 +1,15 @@
 /**
  * Problem 12: Debounce vs Throttle
  * 
- * Implement custom debounce and throttle helper utilities.
+ * Tasks:
+ * 1. Implement a custom debounce utility function:
+ *    - Should delay execution of the callback function until after a specific duration has elapsed since the last call.
+ * 
+ * 2. Implement a custom throttle utility function:
+ *    - Should guarantee that the callback function is executed at most once in every specified time window.
+ * 
+ * 3. Bind these helpers to DOM events (e.g., input event for debounce, button click event for throttle) 
+ *    and log the trigger rates and times to test them.
  */
 
-// 1. TODO: Implement a Debounce function
-function debounce(func, delay) {
-    // Return a debounced function wrapper
-}
-
-// 2. TODO: Implement a Throttle function
-function throttle(func, limit) {
-    // Return a throttled function wrapper
-}
-
-// Visual Playground binding
-const debounceInput = document.getElementById('debounce-input');
-const debounceCount = document.getElementById('debounce-count');
-const debounceLogs = document.getElementById('debounce-logs');
-
-const throttleBtn = document.getElementById('throttle-btn');
-const throttleCount = document.getElementById('throttle-count');
-const throttleLogs = document.getElementById('throttle-logs');
-
-let dTriggerCount = 0;
-let tTriggerCount = 0;
-
-function logMessage(container, text) {
-    const div = document.createElement('div');
-    div.className = 'timeline-log';
-    div.textContent = `[${new Date().toLocaleTimeString()}] ${text}`;
-    container.appendChild(div);
-    container.scrollTop = container.scrollHeight;
-}
-
-// Hook up your implementations here...
+// Write your debounce, throttle implementations and UI event listeners here...

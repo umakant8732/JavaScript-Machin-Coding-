@@ -6,35 +6,15 @@
  */
 
 // Question 1: Variable hoisting with var vs let
-(function() {
-    // Predict output:
-    console.log(a);
-    // console.log(b); // What happens if we uncomment this?
-    
-    var a = 10;
-    let b = 20;
-})();
+// TODO: Explain what happens when you try to access 'a' and 'b' before they are declared in the code block.
+// Write predictions and code exercises here...
+
 
 // Question 2: Function declaration vs Function expression hoisting
-(function() {
-    // Predict output:
-    // greetNormal();
-    // greetExpression();
+// TODO: Explain what happens when you try to call 'greetNormal()' and 'greetExpression()' before their definitions.
+// Write predictions and code exercises here...
 
-    function greetNormal() {
-        console.log("Hello Normal!");
-    }
-
-    var greetExpression = function() {
-        console.log("Hello Expression!");
-    };
-})();
 
 // Question 3: Nested hoisting priority
-var x = 1;
-function outer() {
-    // Predict output of x here:
-    console.log(x);
-    var x = 2;
-}
-outer();
+// TODO: Predict outer function scope variable lookup and write explanations here.
+// Write predictions and code exercises here...
