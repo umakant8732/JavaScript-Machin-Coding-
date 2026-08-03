@@ -50,3 +50,21 @@ JavaScript coding questions (polyfills, helper functions, DOM components).
 
 15. Toast Notification Library (DOM)
     - Implement reusable library to spawn auto-closing toast notification cards.
+
+16. Todo List with LocalStorage (DOM + CSS)
+    - Create a fully functional Todo List with add, delete, toggle completion, active/completed filters, and persistent state in localStorage.
+
+17. Custom Modal Overlay (DOM + CSS)
+    - Build a modal overlay with animations, close button, escape key dismiss, and click-outside closing logic.
+
+18. Search Filter with Auto-Suggest (DOM + CSS)
+    - Create a search input that dynamically renders matching results, highlights query matches, and uses keyboard navigation.
+
+19. Interactive Carousel / Image Slider (DOM + CSS)
+    - Build an image slider with previous/next slides, indicator dots, auto-play loop, and slide transition effects.
+
+20. Tabbed Interface Component (DOM + CSS)
+    - Build responsive tab panels where active buttons switch visible content sections dynamically.
+
+21. Stopwatch with Lap Tracking (DOM + CSS)
+    - Create a precise stopwatch tracking milliseconds, with start, pause, split lap record, and reset actions.
