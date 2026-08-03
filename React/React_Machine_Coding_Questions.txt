@@ -1,0 +1,37 @@
+================================================================================
+REACT.JS MACHINE CODING & PRACTICE PROBLEMS (EASY TO MEDIUM)
+================================================================================
+
+This document contains a quality list of React machine coding and custom hook 
+implementation questions frequently asked in MERN developer live coding rounds.
+
+--------------------------------------------------------------------------------
+1. Custom Hook: useFetch with Cache & AbortController
+   - Implement useFetch(url, options) that caches responses and aborts active requests on component unmount.
+
+2. Custom Hooks: useDebounce and useThrottle
+   - Implement custom hooks to handle input rate limiting and click throttling.
+
+3. Nested Comments System (Reddit-Style)
+   - Build an interactive comments system supporting infinite nested replies, addition, deletion, and editing of comments.
+
+4. Interactive Kanban Board
+   - Build a card board with multiple columns (Todo, In Progress, Done). Support drag-and-drop or button click updates, card creation, and card deletions.
+
+5. Auto-Suggest / Typeahead Search Bar
+   - Create a search box that fetches results from an API. Support keyboard navigation (up/down/enter), result selection, caching, and debouncing.
+
+6. List Virtualization / Windowing
+   - Build a component to render a massive list of 100,000 items efficiently by only rendering the elements visible in the viewport.
+
+7. Paginated Data Table with Filters
+   - Build a table component that supports client-side pagination, column sorting, dynamic text search, and row multi-selection.
+
+8. Dark / Light Theme Context Provider
+   - Create a theme provider context that toggles styles across the entire application and persists the user's preference in localStorage.
+
+9. Infinite Scroll Component
+   - Implement infinite scroll that triggers API fetching when the user reaches the bottom of the list using IntersectionObserver.
+
+10. Custom Modal / Dialog Manager
+    - Build a reusable modal component supporting dynamic content, close callbacks, click-outside-to-dismiss, and key listener esc close.

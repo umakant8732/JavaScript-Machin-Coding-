@@ -1,0 +1,47 @@
+================================================================================
+NODE.JS CONCEPTUAL INTERVIEW QUESTIONS (EASY TO MEDIUM - BANGALORE HITS)
+================================================================================
+
+This document contains curated Node.js system concepts and core engine mechanics
+frequently evaluated in senior backend and fullstack developer interviews.
+
+--------------------------------------------------------------------------------
+1. Node.js Event Loop Phases
+   - Core: Explain the 6 phases of the event loop (Timers, Pending, Idle/Prepare, Poll, Check, Close).
+   - Microtasks: How do process.nextTick() and Promise.then() queue microtasks inside the loop?
+
+2. Stream and Buffers
+   - Core: What are streams? Explain Readable, Writable, Duplex, and Transform streams.
+   - Buffer: How does Node.js store binary data? When should you use streams vs reading a file into memory?
+
+3. Cluster Module vs Worker Threads
+   - Core: How does Node handle CPU-intensive tasks? Difference between multi-process (Cluster) vs multi-thread (Worker Threads).
+   - Usage: When is one preferred over the other?
+
+4. Event Emitter Architecture
+   - Core: What is the EventEmitter class? Explain the observer pattern in Node.js.
+   - Practical: Creating a custom class inheriting EventEmitter and publishing custom events.
+
+5. Dependency Resolution & Package Manager (NPM)
+   - Core: How does package-lock.json work? Difference between ^ (caret) vs ~ (tilde) in package.json.
+   - Resolve: How does Node.js locate imported files/modules (Node resolution algorithm)?
+
+6. Global Exception & Rejection Handling
+   - Core: How do you capture unhandled exceptions in Node without crashing the server?
+   - Handlers: Usage of process.on('uncaughtException') and process.on('unhandledRejection').
+
+7. Node.js Security Best Practices
+   - Core: Basic middleware-level security protocols.
+   - Protection: CORS configuration, Rate Limiting, helmet security headers, and SQL/NoSQL Injection prevention.
+
+8. Child Processes
+   - Core: What is the difference between spawn, exec, execFile, and fork?
+   - Use Cases: Forking a long-running computation task vs executing shell scripts.
+
+9. Token-based (JWT) vs Session-based Authentication
+   - Core: Stateless vs stateful authentication. Pros and cons of storing sessions in Redis vs verifying JWT sign keys.
+   - Storage: Best practices for storing JWT tokens securely on the client.
+
+10. Garbage Collection in V8 Engine
+    - Core: How does V8 allocate memory (stack vs heap)?
+    - Cleaning: Scavenger space vs Mark-Sweep-Compact cycles. How do memory leaks happen in Node.js?

@@ -1,0 +1,66 @@
+================================================================================
+MONGODB CONCEPTUAL INTERVIEW QUESTIONS & AGGREGATION QUERIES
+================================================================================
+
+This document contains curated MongoDB design patterns, indexing rules, and essential
+aggregation queries requested in MERN Stack production environments.
+
+--------------------------------------------------------------------------------
+1. Indexing Strategies (ESR Rule)
+   - Core: Explain Equality, Sort, and Range rule when designing Compound Indexes.
+   - Types: Single Field, Compound, Multikey (Arrays), and TTL indexes.
+
+2. MongoDB Replication vs Sharding
+   - Core: What is replication (Replica Sets) for high availability?
+   - Horizontal Scale: What is sharding for scale? Explain Shard Key selection.
+
+3. ACID Transactions in NoSQL
+   - Core: Does MongoDB support transactions? Yes (session-based).
+   - Use Case: Executing atomic database writes across multiple collections (e.g., checkout/billing).
+
+4. Schema Design: Embedding (De-normalization) vs Referencing (Normalization)
+   - Core: When to embed a document vs when to link documents using DBRef/ObjectIDs.
+   - Limits: The 16MB document size limit constraint.
+
+--------------------------------------------------------------------------------
+ESSENTIAL MONGODB AGGREGATION QUERIES (BANGALORE HITS)
+--------------------------------------------------------------------------------
+
+1. E-commerce: Group orders by product category and calculate average price:
+   db.products.aggregate([
+     { $group: { _id: "$category", avgPrice: { $avg: "$price" } } }
+   ])
+
+2. Joint Search: Join Orders collection with Users collection (borrowing references):
+   db.orders.aggregate([
+     {
+       $lookup: {
+         from: "users",
+         localField: "userId",
+         foreignField: "_id",
+         as: "userDetails"
+       }
+     },
+     { $unwind: "$userDetails" }
+   ])
+
+3. Filtering and Projection: Find active users and select only name and email:
+   db.users.aggregate([
+     { $match: { status: "active" } },
+     { $project: { _id: 0, name: 1, email: 1 } }
+   ])
+
+4. Unwinding Arrays: Flatten an array of tag elements to aggregate tags counts:
+   db.posts.aggregate([
+     { $unwind: "$tags" },
+     { $group: { _id: "$tags", count: { $sum: 1 } } },
+     { $sort: { count: -1 } }
+   ])
+
+5. Dynamic Pagination: Perform limit/skip aggregation:
+   db.logs.aggregate([
+     { $match: { level: "error" } },
+     { $sort: { timestamp: -1 } },
+     { $skip: 10 },
+     { $limit: 10 }
+   ])
