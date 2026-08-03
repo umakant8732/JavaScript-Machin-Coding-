@@ -1,0 +1,52 @@
+================================================================================
+TOP 15 JAVASCRIPT MACHINE CODING QUESTIONS (EASY TO MEDIUM)
+================================================================================
+
+This document contains a highly curated, quality-focused roadmap of MERN developer 
+JavaScript coding questions (polyfills, helper functions, DOM components).
+
+--------------------------------------------------------------------------------
+1. Custom Array Method Polyfills
+   - Polyfill targets: Array.prototype.myMap, Array.prototype.myFilter, Array.prototype.myReduce, Array.prototype.myForEach, Array.prototype.myFlat.
+
+2. Custom Function Method Polyfills
+   - Polyfill targets: Function.prototype.myCall, Function.prototype.myApply, Function.prototype.myBind.
+
+3. Debounce Utility (with options)
+   - Implement debounce(fn, delay, options) to limit function invocation rate.
+
+4. Throttle Utility (with options)
+   - Implement throttle(fn, delay, options) to execute function periodically.
+
+5. Custom Promise Polyfill
+   - Implement a custom Promise class with .then(), .catch(), and static Promise.all, Promise.race.
+
+6. Deep Clone Utility
+   - Implement deepClone(obj) to recursively clone arrays, objects, nested objects without references.
+
+7. Custom Memoize Utility
+   - Implement memoize(fn) to cache computation results based on arguments.
+
+8. Event Emitter (Pub-Sub Pattern)
+   - Implement an EventEmitter class with subscribe(), unsubscribe(), and publish() methods.
+
+9. Function Currying Utility
+   - Implement a generic curry(fn) utility supporting multi-argument collection.
+
+10. Custom SetTimeout & SetInterval Polyfills
+    - Implement custom timers using requestAnimationFrame or Date timestamp polling.
+
+11. Infinite Scroll Utility
+    - Implement UI helper to dynamically detect page bottom and fetch/render more items.
+
+12. Custom Fetch with Timeout & Auto-Retry
+    - Implement a fetch wrapper that automatically retries failed API calls with exponential backoff.
+
+13. Star Rating Component (DOM)
+    - Implement interactive DOM stars rating component with hover and click state.
+
+14. Dynamic Accordion Component (DOM)
+    - Implement collapsible toggle menu list with smooth transition and active state.
+
+15. Toast Notification Library (DOM)
+    - Implement reusable library to spawn auto-closing toast notification cards.

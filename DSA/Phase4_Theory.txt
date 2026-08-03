@@ -1,0 +1,66 @@
+================================================================================
+PHASE 4: RECURSION & NESTED OBJECTS (MERN SPECIAL)
+================================================================================
+
+1. PREREQUISITE THEORY: HOW RECURSION WORKS
+--------------------------------------------------------------------------------
+
+A. WHAT IS RECURSION?
+   - Recursion is a programming pattern where a function calls itself to solve smaller 
+     sub-parts of a problem.
+   - Analogy: To find the last person in a queue, you ask the person in front of you. 
+     They ask the person in front of them, and so on, until the query reaches the 
+     front (base case), and then the answer travels back to you.
+
+B. THE CALL STACK:
+   - When a function calls itself, JS pauses the current function execution and pushes 
+     the new function call onto the "Call Stack".
+   - The Call Stack has a memory limit. If there is no exit condition, it results in 
+     a "Maximum call stack size exceeded" error (Stack Overflow).
+
+C. THE BASE CASE (EXIT CONDITION):
+   - Every recursive function must have a condition that stops it from calling itself.
+     Example:
+     function countdown(n) {
+         if (n <= 0) return; // Base Case
+         console.log(n);
+         countdown(n - 1); // Recursive Call
+     }
+
+
+2. CORE QUESTIONS EXPLAINED (CONCEPT & COMPLEXITY)
+--------------------------------------------------------------------------------
+
+Q22: Flatten a Nested Array
+- Concept: Loop through the array. If the item is a normal value, push it to our result.
+  If it is an array, call `flattenArray(item)` recursively and push/spread its elements 
+  into the result.
+- Time: O(N) where N is total number of individual elements at all depths.
+- Space: O(D) stack space, where D is the maximum depth.
+
+Q23: Deep Clone Object
+- Concept: Native objects copy by reference. To make a true copy, we write a recursive clone:
+  - Base case: If value is null or not an object, return it (primitive values copy by value).
+  - If array: Create a new array and clone each element.
+  - If object: Create a new object and clone each key-value pair recursively.
+- Time: O(N) where N is number of keys, Space: O(D).
+
+Q24: Flatten a Nested Object (Extremely Popular)
+- Concept: Converts nested objects like `{ a: { b: 1 } }` into flat dot notation keys `{ "a.b": 1 }`.
+  - Pass a helper function the current object, and a prefix string (initially `""`).
+  - Loop keys. If value is an object (and not null/array), call helper recursively 
+    passing value and new prefix: `prefix + key + "."`.
+  - Else (base case: primitive value), write directly to flat object: `flat[prefix + key] = value`.
+- Time: O(N) keys, Space: O(D).
+
+Q25: N-ary Category/Folder Search (DFS)
+- Concept: Models search in category trees or file folders.
+  - Structure: A node has `name`, and an array of `children`.
+  - Helper function:
+    - Base case: If `node.name === targetName`, return node.
+    - Loop through `children`. Run recursive search on each child. If child search returns 
+      the target, return it immediately (early exit).
+    - If loop finishes and not found, return null.
+- Time: O(N) nodes traversal, Space: O(D).
+
+================================================================================

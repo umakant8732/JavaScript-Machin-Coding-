@@ -1,0 +1,86 @@
+================================================================================
+PHASE 7: SEARCHING, SORTING & LINKED LISTS (STUDY SHEET)
+================================================================================
+
+1. PREREQUISITE THEORY: LOGARITHMS, COMPARATORS, AND POINTER REFERENCES
+--------------------------------------------------------------------------------
+
+A. BINARY DIVISION (Logarithmic Time O(log N)):
+   - In a sorted dataset, instead of scanning item by item, we jump to the middle.
+   - If target is smaller than middle, we search only the left half. If larger, we search 
+     the right half.
+   - By halving search bounds at each step, we search 1 Million elements in at most 20 steps!
+
+B. CUSTOM COMPARATORS:
+   - In JS, `arr.sort()` converts elements to strings and sorts them alphabetically. 
+     To sort numbers or custom database objects, we must pass a comparator function:
+     arr.sort((a, b) => a.price - b.price); // Ascending sort by price
+     
+C. LINKED LIST REFERENCE POINTERS:
+   - A Linked List is a series of nodes where each node contains `val` and a reference 
+     `next` pointing to the next node:
+     Node: { val: 10, next: { val: 20, next: null } }
+   - Traversal is done by updating node reference: `curr = curr.next`.
+
+
+2. CORE QUESTIONS EXPLAINED (CONCEPT & COMPLEXITY)
+--------------------------------------------------------------------------------
+
+Q35: Binary Search
+- Concept: `low = 0`, `high = length - 1`. Find middle: `mid = Math.floor((low + high) / 2)`.
+  If `arr[mid] === target`, return index. If `arr[mid] < target`, move `low = mid + 1`. 
+  Else, move `high = mid - 1`. Repeat until `low > high`.
+- Time: O(log N), Space: O(1).
+
+Q36: Bubble Sort
+- Concept: Loop through array multiple times. Swap adjacent elements if they are in the 
+  wrong order (`arr[i] > arr[i+1]`). With each complete pass, the largest element 
+  "bubbles up" to the end.
+- Time: O(N^2), Space: O(1).
+
+Q37: Sort Array of Objects (Database Sorting)
+- Concept: Sort API database output by multiple conditions.
+  - E.g., Sort products by price ascending. If prices match, sort by rating descending.
+  - Implementation:
+    ```javascript
+    products.sort((a, b) => {
+        if (a.price !== b.price) return a.price - b.price;
+        return b.rating - a.rating;
+    });
+    ```
+- Time: O(N log N), Space: O(N) / O(1) depending on engine.
+
+Q38: Search in 2D Matrix
+- Concept: A sorted 2D matrix can be treated as a single flat sorted array.
+  - Let total elements be `total = rows * cols`.
+  - Perform standard Binary Search from `low = 0` to `high = total - 1`.
+  - Map `mid` index back to 2D coordinates: `row = Math.floor(mid / cols)`, `col = mid % cols`.
+- Time: O(log (Rows * Cols)), Space: O(1).
+
+Q39: Reverse a Linked List (Very Common)
+- Concept: Swap pointer directions. 
+  - Keep track of `prev = null`, `curr = head`.
+  - While `curr` is not null:
+    - Save next node: `nextTemp = curr.next`.
+    - Reverse reference: `curr.next = prev`.
+    - Shift pointers: `prev = curr`, `curr = nextTemp`.
+  - Return `prev` as new head.
+- Time: O(N), Space: O(1).
+
+Q40: Detect Loop / Find Middle (Floyd's Fast-Slow Pointer)
+- Concept:
+  - Find Middle: Move `slow` pointer by 1 step and `fast` pointer by 2 steps. When `fast` 
+    reaches the end, `slow` is exactly at the middle.
+  - Detect Loop: If there's a loop, the `fast` pointer will eventually catch up and meet 
+    the `slow` pointer (`slow === fast`).
+- Time: O(N), Space: O(1).
+
+Q41: Remove N-th Node From End
+- Concept: Use two pointers with a gap.
+  - Advance `fast` pointer N steps forward.
+  - Move both `slow` and `fast` pointers together by 1 step until `fast.next === null`.
+  - Now, `slow` is positioned exactly before the node to delete. Delete it by updating 
+    `slow.next = slow.next.next`.
+- Time: O(N) (single pass), Space: O(1).
+
+================================================================================

@@ -1,0 +1,65 @@
+================================================================================
+TOP 15 JAVASCRIPT CONCEPTUAL INTERVIEW QUESTIONS (EASY TO MEDIUM)
+================================================================================
+
+This document contains a highly curated, quality-focused roadmap of JavaScript 
+conceptual questions frequently asked in senior MERN stack developer interviews.
+
+--------------------------------------------------------------------------------
+1. Event Loop & Execution Context
+   - Core: How does JS handle async code? Explain call stack, web APIs, callback queue, microtask queue.
+   - Scenario: Order of execution output questions with setTimeout and Promise.then.
+
+2. Closures & Lexical Scope
+   - Core: What is a closure? How does it preserve scope?
+   - Practical: Emulating private variables, factory functions, and basic memoization.
+
+3. Hoisting & Temporal Dead Zone (TDZ)
+   - Core: Difference between var, let, and const declarations during creation vs execution phases.
+   - Practical: Function declarations vs function expressions hoisting behaviors.
+
+4. The 'this' Keyword & Bindings
+   - Core: How is the 'this' context determined dynamically?
+   - Rules: Implicit binding, Explicit binding (call, apply, bind), and Lexical arrow functions.
+
+5. Prototype Chain & Prototypal Inheritance
+   - Core: How do objects inherit properties in JS? What is __proto__ vs prototype?
+   - Practical: Creating objects using prototypes and constructor inheritance.
+
+6. Event Propagation (Bubbling, Capturing, Delegation)
+   - Core: Explain how event bubbling and event capturing work in the DOM tree.
+   - Practical: When and why to use event delegation for list elements.
+
+7. Promises & Asynchronous JS
+   - Core: Explain Promise states (pending, fulfilled, rejected) and microtask scheduling.
+   - Practical: Promise chaining and error handling.
+
+8. Async / Await Syntactic Sugar
+   - Core: How does async/await simplify async code? How does it map to standard promises?
+   - Practical: Handling concurrent async tasks with try/catch.
+
+9. Strict Mode ("use strict")
+   - Core: What does strict mode enforce? How does it change the default binding of 'this'?
+
+10. Shallow vs Deep Copying
+    - Core: What is the difference? How do memory references behave?
+    - Practical: Using spread operator, Object.assign vs structuredClone / custom functions.
+
+11. Map vs WeakMap & Set vs WeakSet
+    - Core: Key differences in reference holding and memory garbage collection.
+    - Practical: When to use WeakMap for caching/private storage.
+
+12. High-Order Functions
+    - Core: What is a HOF? (Functions that accept functions as arguments or return functions).
+    - Practical: Writing a custom map/filter wrapper.
+
+13. Currying in JavaScript
+    - Core: Transforming a function that takes multiple arguments into nested single-argument calls.
+    - Practical: Writing dynamic discount or logging utilities.
+
+14. Debounce vs Throttle Concepts
+    - Core: What is the difference in triggering events (limiting calls vs periodic execution)?
+    - Practical: Real-world search boxes and window resize applications.
+
+15. Value vs Reference Types
+    - Core: How does JS store primitive values vs complex objects in stack and heap memory?

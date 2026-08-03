@@ -1,0 +1,107 @@
+================================================================================
+PHASE 1: BASIC ARRAYS & TWO POINTERS PATTERN (STUDY SHEET)
+================================================================================
+
+1. PREREQUISITE THEORY: THREE FUNDAMENTAL JS CONCEPTS
+--------------------------------------------------------------------------------
+
+A. MUTABILITY VS IMMUTABILITY:
+   - In JavaScript, STRINGS are immutable (cannot be changed in-place).
+     If you try to do: 
+     let str = "hello";
+     str[0] = "z"; 
+     console.log(str); // Still outputs "hello"! No error, but string doesn't change.
+     
+     Therefore, to modify strings in-place, we must first convert them into an array:
+     let arr = str.split(""); // ['h', 'e', 'l', 'l', 'o']
+     arr[0] = 'z';
+     str = arr.join(""); // "zello"
+     
+   - ARRAYS are mutable. You can change array indices directly:
+     let arr = [1, 2, 3];
+     arr[0] = 99; // arr is now [99, 2, 3]
+
+B. SWAPPING VALUES:
+   - To swap values at two indices `i` and `j` in an array, we use a temporary variable:
+     let temp = arr[i];
+     arr[i] = arr[j];
+     arr[j] = temp;
+
+C. POINTERS CONCEPT:
+   - Pointers in JS are simply index tracking variables (like `let left = 0` and 
+     `let right = arr.length - 1`). They store array indices.
+
+
+2. THE TWO POINTERS TEMPLATE (INWARD SCANNING)
+--------------------------------------------------------------------------------
+This pattern is used when we want to process an array from both ends moving inward.
+
+```javascript
+let left = 0;
+let right = arr.length - 1;
+
+while (left < right) {
+    // Perform operations (e.g., swapping)
+    // arr[left] vs arr[right]
+    
+    // Move pointers closer
+    left++;
+    right--;
+}
+```
+
+
+3. CORE QUESTIONS EXPLAINED (CONCEPT & COMPLEXITY)
+--------------------------------------------------------------------------------
+
+Q02: Reverse String / Array
+- Concept: Initialize `left = 0` and `right = length - 1`. Swap elements at `left` and 
+  `right`, then do `left++` and `right--`. Stop when pointers cross.
+- Time: O(N) (swapping N/2 elements).
+- Space: O(1) (swapped in-place).
+
+Q03: Check Palindrome
+- Concept: Read string from both ends inward. Compare if `str[left] === str[right]`. 
+  If they don't match, return false immediately (early exit).
+- Time: O(N), Space: O(1).
+
+Q04: Move Zeroes
+- Concept: Use a write pointer `writeIdx = 0` and a read pointer `i` traversing 0 to N-1.
+  If `arr[i]` is non-zero, swap `arr[i]` with `arr[writeIdx]` and do `writeIdx++`.
+- Time: O(N), Space: O(1).
+
+Q05: Separate Even and Odd Numbers
+- Concept: `left = 0`, `right = length - 1`. If `left` is even, move `left++`. If `right` 
+  is odd, move `right--`. If left is odd and right is even, swap them.
+- Time: O(N), Space: O(1).
+
+Q06: Remove Duplicates from Sorted Array
+- Concept: Since array is sorted, duplicates are adjacent. Keep a `writeIdx = 1` for 
+  unique values. Traverse array from index 1. If `arr[i] !== arr[writeIdx - 1]`, write it 
+  to `arr[writeIdx]` and increment `writeIdx`. Return `writeIdx` as new length.
+- Time: O(N), Space: O(1).
+
+Q07: Check if String is Subsequence
+- Concept: Check if characters of string `s` appear in string `t` in the same order.
+  `p1 = 0` (for s), `p2 = 0` (for t). While both loops run, if `s[p1] === t[p2]`, `p1++`. 
+  Always `p2++`. If `p1 === s.length`, it's a subsequence.
+- Time: O(N) (length of t), Space: O(1).
+
+Q08: Squares of a Sorted Array
+- Concept: Since array has negative sorted values, extreme ends contain largest squares.
+  `left = 0`, `right = length - 1`. Compare `arr[left]^2` and `arr[right]^2`. 
+  Place the larger square at the end of a result array and shrink that pointer.
+- Time: O(N), Space: O(N) (requires output array).
+
+Q09: Valid Palindrome II
+- Concept: Move pointers inward. On first mismatch `str[left] !== str[right]`, check if 
+  skipping either character (subsegment `left+1 to right` OR `left to right-1`) makes 
+  it a valid palindrome.
+- Time: O(N), Space: O(1).
+
+Q10: Container With Most Water (Capstone Medium)
+- Concept: Pointers `left` and `right` at ends. Calculate area: `(right - left) * min(height[left], height[right])`.
+  To maximize area, shift the pointer pointing to the shorter height inward.
+- Time: O(N), Space: O(1).
+
+================================================================================

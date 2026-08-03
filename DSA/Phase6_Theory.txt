@@ -1,0 +1,72 @@
+================================================================================
+PHASE 6: STACKS & QUEUES (BUFFERS) (STUDY SHEET)
+================================================================================
+
+1. PREREQUISITE THEORY: STACKS & QUEUES OPERATION
+--------------------------------------------------------------------------------
+
+A. STACK (LIFO - Last In, First Out):
+   - Think of a stack of dinner plates. The last plate you place on top is the first one 
+     you remove.
+   - Operations:
+     - `push()` to add to top.
+     - `pop()` to remove from top.
+     - Both operations take O(1) Constant Time.
+   - Standard JS array acts as a perfect stack using native `.push()` and `.pop()`.
+
+B. QUEUE (FIFO - First In, First Out):
+   - Think of a queue at a movie ticket counter. The first person in line gets the 
+     ticket first.
+   - Operations:
+     - `push()` (enqueue) to add to back.
+     - `shift()` (dequeue) to remove from front.
+   - NOTE: JS native array `.shift()` is actually O(N) because when you remove the first 
+     element, the JS engine has to re-index all remaining elements. For true O(1) 
+     queues, we use pointers or linked nodes.
+
+
+2. CORE QUESTIONS EXPLAINED (CONCEPT & COMPLEXITY)
+--------------------------------------------------------------------------------
+
+Q30: Valid Parentheses (Extremely Common)
+- Concept: Traverse the string. If you see an opening bracket `(`, `[`, `{`, push its 
+  corresponding closing bracket onto the stack. If you see a closing bracket, pop 
+  from stack and check if they match. If stack is empty or doesn't match, return false.
+  At the end, return true if stack is empty.
+- Time: O(N), Space: O(N).
+
+Q31: Min Stack
+- Concept: Design a stack that retrieves the minimum element in O(1) time.
+  - Maintain two stacks: `stack` (stores normal values) and `minStack` (stores the 
+    minimum value seen so far).
+  - When pushing `val`, also push `min(val, minStack.peek())` to `minStack`.
+  - When popping, pop from both stacks.
+- Time: O(1) for all operations, Space: O(N).
+
+Q32: Simplify Path (Node.js style backend utility)
+- Concept: Parse directory jumps (like Unix `/a/./b/../../c/`).
+  - Split path by `/`. Ignore empty segments, `.`, or double slashes.
+  - If segment is `..`, pop from stack (goes up one directory).
+  - Else, push folder name to stack.
+  - Join stack elements at the end with `/`.
+- Time: O(N), Space: O(N).
+
+Q33: Next Greater Element (Monotonic Stack)
+- Concept: Find the next element larger than `arr[i]` on its right.
+  - Iterate array from right to left.
+  - Maintain a stack of elements. While stack is not empty and `stack.peek() <= arr[i]`, 
+    pop elements from stack (they are smaller, so they cannot be the next greater).
+  - The next greater is stack.peek() (or -1 if empty).
+  - Push `arr[i]` onto stack.
+- Time: O(N) (each element is pushed and popped at most once), Space: O(N).
+
+Q34: Task Runner with Concurrency Limit (Advanced Machine Coding standard)
+- Concept: Run N asynchronous tasks but at most `limit` tasks can run in parallel.
+  - Store tasks in a Queue.
+  - Keep track of `activeTasks` count.
+  - A runner helper function: while `activeTasks < limit` and queue has tasks, dequeue 
+    a task, increment `activeTasks`, execute it (returns a Promise), and when it finishes, 
+    decrement `activeTasks` and trigger the runner helper again to pull the next task.
+- Time: O(N), Space: O(N) (task list storage).
+
+================================================================================
