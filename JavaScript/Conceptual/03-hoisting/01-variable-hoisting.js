@@ -7,3 +7,20 @@
  */
 
 // Write your code here
+
+
+//in memeory phase a has undefined stored already, that is why at call time it printed undefined without any error
+console.log(a); //output -> undefined
+var a = 10;
+
+
+
+// b was registered in memory but it was not initialized, because of that it was in TDZ, thats why it gaves error at call time
+console.log(b); //crash -> reference error
+let b = 20; 
+
+
+//same as let 
+console.log(c);
+const c = 30;
+
