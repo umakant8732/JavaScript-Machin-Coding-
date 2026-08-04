@@ -9,4 +9,15 @@
 
 // Write your code here
 
+console.log("value of this is:", this);
+console.log("is this equal to module.exports?:", this === module.exports);
+console.log("is this equal to global?:", this === global);
+
+/**
+ * Behind the Scenes (Node.js Execution):
+ * 1. Node wraps the entire file in a module function.
+ * 2. It executes it internally using: moduleWrapper.call(module.exports, ...)
+ * 3. As a result, global 'this' within the file refers to 'module.exports' ({}) rather than the 'global' object.
+ */
+
 
