@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+
+    <div class="todo-container">
+
+        <h1>Task Manager</h1>
+
+
+        <div class="todo-input-section">
+            <input type="text" id="todo-input" placeholder="Whats needs to be done?" autocomplete="off">
+            <button id="add-todo-btn">
+                Add Task
+            </button>
+        </div>
+
+        <!-- <div class="bulk-action-section">
+            <label for="select-all-lable">
+                <input type="checkbox" id="select-all-checkbox">
+                <span>Mark all as complete</span>
+            </label>
+        </div> -->
+
+
+        <ul id="todo-list">
+            <li>
+                <input type="checkbox" class="todo-checkbox">
+                <span>Buy groceries from market</span>
+                <button class="edit-btn">✏️</button>
+                <button class="delete-btn">🗑️</button>
+            </li>
+
+            <li class="completed">
+                <input type="checkbox" class="todo-checkbox" checked>
+                <span>Complete JavaScript practice</span>
+                <button class="edit-btn">✏️</button>
+                <button class="delete-btn">🗑️</button>
+            </li>
+        </ul>
+
+
+
+    </div>
+    <script src="./index.js"></script>
+</body>
+
+</html>
