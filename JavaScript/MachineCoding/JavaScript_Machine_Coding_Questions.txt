@@ -1,70 +1,162 @@
 ================================================================================
-TOP 15 JAVASCRIPT MACHINE CODING QUESTIONS (EASY TO MEDIUM)
+JAVASCRIPT MACHINE CODING — 2 YEARS MERN (Service / Mid-size / Bangalore Startup)
 ================================================================================
 
-This document contains a highly curated, quality-focused roadmap of MERN developer 
-JavaScript coding questions (polyfills, helper functions, DOM components).
+Target: Write working code in 30–45 min (polyfills + DOM UI).
+Focus: DOM-heavy components + a few must-have utilities.
+NOT for: Advanced polyfills (Promise engine, timers, fetch-retry), FAANG-only.
 
---------------------------------------------------------------------------------
-1. Custom Array Method Polyfills
-   - Polyfill targets: Array.prototype.myMap, Array.prototype.myFilter, Array.prototype.myReduce, Array.prototype.myForEach, Array.prototype.myFlat.
+Split with Conceptual file:
+  - Conceptual = explain debounce/throttle, events, promises, this, etc.
+  - HERE = implement utilities + build DOM features
+  - Do NOT re-study the same topic as "theory only" here
 
-2. Custom Function Method Polyfills
-   - Polyfill targets: Function.prototype.myCall, Function.prototype.myApply, Function.prototype.myBind.
 
-3. Debounce Utility (with options)
-   - Implement debounce(fn, delay, options) to limit function invocation rate.
+================================================================================
+SECTION 1: CORE UTILITIES (Must code — interviews love these)
+================================================================================
 
-4. Throttle Utility (with options)
-   - Implement throttle(fn, delay, options) to execute function periodically.
+1. Array Polyfills — map, filter, reduce, forEach
+   - Array.prototype.myMap / myFilter / myReduce / myForEach
+   - Explain map vs filter vs reduce while coding
 
-5. Custom Promise Polyfill
-   - Implement a custom Promise class with .then(), .catch(), and static Promise.all, Promise.race.
+2. Function Polyfills — call, apply, bind
+   - Function.prototype.myCall / myApply / myBind
+   - Follow-up: bind returns new function; call/apply run now
 
-6. Deep Clone Utility
-   - Implement deepClone(obj) to recursively clone arrays, objects, nested objects without references.
+3. Debounce Utility
+   - debounce(fn, delay) — optional: cancel()
+   - Use case: search input (concept already in Conceptual Q13)
 
-7. Custom Memoize Utility
-   - Implement memoize(fn) to cache computation results based on arguments.
+4. Throttle Utility
+   - throttle(fn, delay)
+   - Use case: scroll / button spam
 
-8. Event Emitter (Pub-Sub Pattern)
-   - Implement an EventEmitter class with subscribe(), unsubscribe(), and publish() methods.
+5. Deep Clone (Simple)
+   - deepClone for plain objects + arrays (nested)
+   - Edge: null; skip circular for now
+   - Concept of shallow vs deep → Conceptual Q6
 
-9. Function Currying Utility
-   - Implement a generic curry(fn) utility supporting multi-argument collection.
+6. Memoize Utility (Simple)
+   - Cache by arguments; return cached result on repeat
+   - Builds on closures (Conceptual Q2)
 
-10. Custom SetTimeout & SetInterval Polyfills
-    - Implement custom timers using requestAnimationFrame or Date timestamp polling.
+7. once() Utility
+   - Run function only first time; later calls return first result
 
-11. Infinite Scroll Utility
-    - Implement UI helper to dynamically detect page bottom and fetch/render more items.
 
-12. Custom Fetch with Timeout & Auto-Retry
-    - Implement a fetch wrapper that automatically retries failed API calls with exponential backoff.
+================================================================================
+SECTION 2: DOM COMPONENTS — PRIMARY FOCUS (Must build)
+================================================================================
 
-13. Star Rating Component (DOM)
-    - Implement interactive DOM stars rating component with hover and click state.
+8. Todo List + LocalStorage
+   - Add, delete, toggle complete
+   - Filters: all / active / completed
+   - Persist with localStorage
 
-14. Dynamic Accordion Component (DOM)
-    - Implement collapsible toggle menu list with smooth transition and active state.
+9. Custom Modal Overlay
+   - Open / close, close button
+   - Escape key + click-outside to dismiss
+   - Basic show/hide animation (CSS)
 
-15. Toast Notification Library (DOM)
-    - Implement reusable library to spawn auto-closing toast notification cards.
+10. Star Rating
+    - Hover preview + click to set rating
+    - Highlight stars up to selected/hovered
 
-16. Todo List with LocalStorage (DOM + CSS)
-    - Create a fully functional Todo List with add, delete, toggle completion, active/completed filters, and persistent state in localStorage.
+11. Tabs Component
+    - Tab buttons switch panels
+    - Only one active panel; clear active styles
 
-17. Custom Modal Overlay (DOM + CSS)
-    - Build a modal overlay with animations, close button, escape key dismiss, and click-outside closing logic.
+12. Accordion
+    - Expand/collapse sections
+    - Single-open mode (opening one closes others)
 
-18. Search Filter with Auto-Suggest (DOM + CSS)
-    - Create a search input that dynamically renders matching results, highlights query matches, and uses keyboard navigation.
+13. Toast Notifications
+    - showToast(message, type, duration)
+    - Auto-dismiss; stack multiple toasts
 
-19. Interactive Carousel / Image Slider (DOM + CSS)
-    - Build an image slider with previous/next slides, indicator dots, auto-play loop, and slide transition effects.
+14. Search Filter / Auto-Suggest
+    - Filter list as user types
+    - Highlight match text
+    - Keyboard: ↑ ↓ Enter (basic)
 
-20. Tabbed Interface Component (DOM + CSS)
-    - Build responsive tab panels where active buttons switch visible content sections dynamically.
+15. Form Validation (Client-side)
+    - Required, email format, min length
+    - Inline errors; disable submit until valid
+    - Use submit event + preventDefault
 
-21. Stopwatch with Lap Tracking (DOM + CSS)
-    - Create a precise stopwatch tracking milliseconds, with start, pause, split lap record, and reset actions.
+16. Custom Dropdown
+    - Open/close, select option
+    - Click-outside to close
+    - Basic keyboard support (bonus)
+
+17. Pagination UI
+    - Prev / next + page numbers
+    - Render only current page slice of data
+
+18. Show / Hide Password + Simple Login Form UI
+    - Toggle password visibility
+    - Controlled inputs + basic validation message
+    - Common junior DOM machine-coding ask
+
+
+================================================================================
+SECTION 3: EXTRA DOM PRACTICE (After Section 1–2)
+================================================================================
+
+19. Infinite Scroll (Vanilla)
+    - Detect near bottom; append more items
+    - Loading text + end-of-list state
+
+20. Counter with Undo
+    - Inc / dec / reset
+    - Undo last action (history array)
+
+21. Progress Bar
+    - Fill width by percentage
+    - Optional: step buttons (25 / 50 / 75 / 100)
+
+22. Image Gallery Lightbox (Simple)
+    - Thumbnail grid → click opens overlay with large image
+    - Close on button / Escape / backdrop
+
+23. FAQ List with Event Delegation
+    - Many FAQ items; ONE click listener on parent
+    - Toggle answer visibility (practice Conceptual Q12)
+
+24. Theme Toggle (Light / Dark)
+    - Button toggles class on <body> or <html>
+    - Persist preference in localStorage
+
+25. Copy-to-Clipboard Button
+    - Click copies text from input/textarea
+    - Temporary “Copied!” feedback toast/text
+
+
+================================================================================
+REMOVED / SKIPPED (Not for this target — revisit later if needed)
+================================================================================
+- Full Promise polyfill (.then engine, all/race internals)
+- Event Emitter class (optional later)
+- Currying / compose / pipe utilities
+- Array.myFlat / flattenObject
+- Custom setTimeout / setInterval polyfills
+- Fetch timeout + exponential retry
+- Carousel / Stopwatch heavy UI puzzles
+- WeakMap-based designs
+
+
+================================================================================
+SUGGESTED ORDER (4 weeks)
+================================================================================
+Week 1: Q1 → Q2 → Q3 → Q4          (polyfills + debounce/throttle)
+Week 2: Q5 → Q6 → Q7 → Q8 → Q9     (clone/memo/once + Todo + Modal)
+Week 3: Q10 → Q11 → Q12 → Q13 → Q14 → Q15  (DOM core set)
+Week 4: Q16 → Q17 → Q18 + pick 2 from Section 3
+
+Pair with Conceptual file:
+  Code debounce HERE ←→ Explain debounce vs throttle THERE
+  Build FAQ delegation HERE ←→ Explain bubbling THERE
+
+Estimated time: 30–45 min per question (interview simulation)
+================================================================================

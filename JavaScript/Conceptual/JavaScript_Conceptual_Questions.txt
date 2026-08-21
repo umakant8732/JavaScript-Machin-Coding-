@@ -1,65 +1,242 @@
 ================================================================================
-TOP 15 JAVASCRIPT CONCEPTUAL INTERVIEW QUESTIONS (EASY TO MEDIUM)
+JAVASCRIPT CONCEPTUAL — 2 YEARS MERN (Service / Mid-size / Bangalore Startup)
 ================================================================================
 
-This document contains a highly curated, quality-focused roadmap of JavaScript 
-conceptual questions frequently asked in senior MERN stack developer interviews.
+Target: Explain concepts clearly + predict output / short scenarios.
+Study order = question number order (1 → last). Pehle fundamentals, phir async, phir DOM.
 
---------------------------------------------------------------------------------
-1. Event Loop & Execution Context
-   - Core: How does JS handle async code? Explain call stack, web APIs, callback queue, microtask queue.
-   - Scenario: Order of execution output questions with setTimeout and Promise.then.
+How to study:
+1. Read topic → explain in your own words (out loud)
+2. 1–2 output / scenario questions
+3. One real project example
 
-2. Closures & Lexical Scope
-   - Core: What is a closure? How does it preserve scope?
-   - Practical: Emulating private variables, factory functions, and basic memoization.
 
-3. Hoisting & Temporal Dead Zone (TDZ)
-   - Core: Difference between var, let, and const declarations during creation vs execution phases.
-   - Practical: Function declarations vs function expressions hoisting behaviors.
+================================================================================
+PHASE 1: MEMORY & TYPES (Pehle yeh — baaki ka base)
+================================================================================
 
-4. The 'this' Keyword & Bindings
-   - Core: How is the 'this' context determined dynamically?
-   - Rules: Implicit binding, Explicit binding (call, apply, bind), and Lexical arrow functions.
+1. Call Stack vs Heap (Short Diagram)
+   - Call Stack: function calls / execution order (LIFO). Sync code yahan chalta hai.
+   - Heap: objects/arrays/functions ka actual data store (badi memory area).
+   - Primitive values mostly stack-side copy; objects heap pe, variable sirf reference rakhta hai.
 
-5. Prototype Chain & Prototypal Inheritance
-   - Core: How do objects inherit properties in JS? What is __proto__ vs prototype?
-   - Practical: Creating objects using prototypes and constructor inheritance.
+   Diagram (yaad rakhna):
+   ```
+   CALL STACK (execution)          HEAP (data)
+   ┌─────────────────┐             ┌──────────────────────┐
+   │ fnB()           │             │  { name: "Umakant" } │
+   │ fnA()           │  reference  │  [1, 2, 3]           │
+   │ main/script     │ ──────────► │  large objects live  │
+   └─────────────────┘             └──────────────────────┘
+   Stack = "ab kaunsa function chal raha"
+   Heap  = "data kahan pada hai"
+   ```
 
-6. Event Propagation (Bubbling, Capturing, Delegation)
-   - Core: Explain how event bubbling and event capturing work in the DOM tree.
-   - Practical: When and why to use event delegation for list elements.
+2. Value vs Reference Types
+   - Primitives (number, string, boolean, null, undefined, symbol, bigint) → copy by value
+   - Objects / arrays / functions → copy by reference (same heap object)
+   - Why `obj2 = obj1` dono change karta hai; kaise alag reference banaye
 
-7. Promises & Asynchronous JS
-   - Core: Explain Promise states (pending, fulfilled, rejected) and microtask scheduling.
-   - Practical: Promise chaining and error handling.
+3. == vs === and Truthy / Falsy
+   - === strict (type + value); == loose (coercion) — prefer ===
+   - Falsy: 0, "", null, undefined, NaN, false
+   - ?? (nullish) vs || (falsy) — short difference
 
-8. Async / Await Syntactic Sugar
-   - Core: How does async/await simplify async code? How does it map to standard promises?
-   - Practical: Handling concurrent async tasks with try/catch.
+4. null vs undefined
+   - undefined = missing / not assigned
+   - null = intentional empty
+   - Optional chaining ?.
 
-9. Strict Mode ("use strict")
-   - Core: What does strict mode enforce? How does it change the default binding of 'this'?
 
-10. Shallow vs Deep Copying
-    - Core: What is the difference? How do memory references behave?
-    - Practical: Using spread operator, Object.assign vs structuredClone / custom functions.
+================================================================================
+PHASE 2: SCOPE & `this` (Core interview block)
+================================================================================
 
-11. Map vs WeakMap & Set vs WeakSet
-    - Core: Key differences in reference holding and memory garbage collection.
-    - Practical: When to use WeakMap for caching/private storage.
+5. Hoisting & Temporal Dead Zone (TDZ)
+   - var vs let vs const during creation phase
+   - Function declaration vs function expression hoisting
+   - TDZ: let/const before init → ReferenceError
 
-12. High-Order Functions
-    - Core: What is a HOF? (Functions that accept functions as arguments or return functions).
-    - Practical: Writing a custom map/filter wrapper.
+6. Closures & Lexical Scope
+   - Function remembers outer variables after outer returns
+   - Private variables / factory functions
+   - Classic loop + var bug; fix with let or IIFE
 
-13. Currying in JavaScript
-    - Core: Transforming a function that takes multiple arguments into nested single-argument calls.
-    - Practical: Writing dynamic discount or logging utilities.
+7. The 'this' Keyword
+   - Implicit (obj.method), explicit (call/apply/bind), arrow lexical
+   - Method reference loss (copy / setTimeout)
+   - Arrow as object method vs arrow inside normal method
+   - Practice: 04-this-keyword/10-four-buckets-this-practice.js
 
-14. Debounce vs Throttle Concepts
-    - Core: What is the difference in triggering events (limiting calls vs periodic execution)?
-    - Practical: Real-world search boxes and window resize applications.
+8. ES6 Essentials Used Daily
+   - Destructuring, spread/rest, template literals
+   - Arrow vs normal function (tie back to this)
 
-15. Value vs Reference Types
-    - Core: How does JS store primitive values vs complex objects in stack and heap memory?
+
+================================================================================
+PHASE 3: OBJECTS, COLLECTIONS & COPY
+================================================================================
+
+9. Prototype Chain (Basics Only)
+   - Objects inherit via [[Prototype]]
+   - Array methods live on Array.prototype
+   - Enough: "arr.map works because of prototype"
+   - Skip deep custom inheritance for now
+
+10. Object as HashMap + Map + Set + WeakMap + WeakSet
+    - HashMap idea: key → value fast lookup O(1) avg
+    - Plain Object `{}`: string/symbol keys; good for simple maps (freq count)
+    - Map: any type keys, .get/.set/.has, size, better for frequent add/delete
+    - Set: unique values only; .add/.has — duplicates / visited tracking
+    - WeakMap: keys must be objects; weak refs → GC friendly; not iterable
+    - WeakSet: weak object membership only
+    - Junior rule of thumb:
+        freq / Two Sum style     → Object or Map
+        unique / seen            → Set
+        private metadata on DOM/obj → WeakMap (awareness)
+    - Note: Deep WeakMap GC theory skip; bas difference + kab use
+
+11. Shallow vs Deep Copy
+    - Spread / Object.assign = shallow (nested still shared)
+    - Deep: structuredClone / recursive clone idea
+    - When shallow is enough in apps
+
+
+================================================================================
+PHASE 4: FUNCTIONS & ARRAY METHODS
+================================================================================
+
+12. Higher-Order Functions & Array Methods
+    - HOF = takes/returns function
+    - map vs filter vs reduce vs forEach — kab kaunsa (verbally)
+    - Polyfill practice → Machine Coding (yahan sirf concept)
+
+
+================================================================================
+PHASE 5: ASYNC JS (Promises → await → Event Loop)
+================================================================================
+
+13. Promises (States, Chaining, all vs allSettled)
+    - States: pending → fulfilled / rejected
+    - .then / .catch / .finally; microtasks
+    - Promise.all: saari success chahiye; EK bhi reject → overall reject
+    - Promise.allSettled: saari settle hone do; har result {status, value/reason}
+    - One-liner: all = fail-fast | allSettled = wait for everyone, no fail-fast
+
+14. Async / Await
+    - Syntactic sugar over Promises
+    - try/catch
+    - Sequential await vs parallel (Promise.all)
+
+15. Event Loop & Execution Context
+    - Call stack + Web APIs + macrotask queue (setTimeout) + microtask queue (Promises)
+    - Order: sync → microtasks → macrotasks
+    - Why UI doesn't freeze on async work
+    - Ties back to Q1 stack diagram
+
+
+================================================================================
+PHASE 6: DOM & BROWSER (MERN frontend rounds)
+================================================================================
+
+16. DOM Tree & Selecting / Creating Nodes
+    - querySelector / querySelectorAll vs getElementById
+    - createElement, appendChild, textContent vs innerHTML (XSS)
+    - classList add/remove/toggle
+
+17. Events: addEventListener + preventDefault vs stopPropagation
+    - click, input, submit, keydown
+    - event.target vs event.currentTarget
+    - preventDefault(): browser ka DEFAULT action roko
+        Scenario A: form submit → page reload mat ho
+        Scenario B: <a href> click → navigate mat ho
+        Scenario C: input type=number scroll / context menu (jab default unwanted ho)
+    - stopPropagation(): event ko parent listeners tak mat jane do (bubble/capture stop)
+        Scenario A: button inside clickable card — button click pe card ka click na chale
+        Scenario B: dropdown item click — document pe laga "outside click close" na fire ho galat time pe
+        Scenario C: nested menus — child click parent handler ko na trigger kare
+    - Dono saath: form button pe kabhi preventDefault + stopPropagation (rare; samajh ke use)
+    - Rule: default browser behavior → preventDefault | parent handlers block → stopPropagation
+
+18. Event Bubbling, Capturing & Delegation
+    - Capture → target → bubble
+    - Delegation: one parent listener for many children (dynamic lists)
+    - Real use: todo delete buttons, table rows
+
+19. Debounce vs Throttle (Concept Only)
+    - Debounce: wait until quiet (search)
+    - Throttle: at most once per interval (scroll/resize)
+    - Code → Machine Coding file
+
+20. Browser Storage
+    - localStorage vs sessionStorage vs cookies
+    - JSON.stringify / parse
+    - Sync API / size limits (awareness)
+
+21. Rendering Basics (Junior-friendly)
+    - Reflow vs Repaint (simple)
+    - Avoid layout thrashing in loops
+    - DocumentFragment / batch updates (awareness)
+
+
+================================================================================
+PHASE 7: PROJECT STRUCTURE
+================================================================================
+
+22. Modules (import / export)
+    - Named vs default export
+    - Scope + reuse mental model
+
+
+================================================================================
+SKIP / LATER (abhi mat pehlo)
+================================================================================
+- WeakMap/WeakSet ka bahut deep GC internals (Q10 pe sirf usage enough)
+- Full Promise polyfill engine
+- Heavy currying / compose / pipe
+- Generators / Proxies / Symbols deep dive
+- Strict mode long lecture (this ke saath lightly cover)
+
+
+================================================================================
+WEEKLY ORDER (number sequence follow karo)
+================================================================================
+Week 1: Q1 → Q4   (stack/heap, value/ref, ===, null/undefined)
+Week 2: Q5 → Q8   (hoisting, closure, this, ES6)
+Week 3: Q9 → Q12  (prototype, Map/Set/Weak*, copy, HOF)
+Week 4: Q13 → Q15 (Promises+all/allSettled, async/await, event loop)
+Week 5: Q16 → Q21 (DOM + events + storage + render)
+Week 6: Q22 + revision of weak topics
+
+Estimated: 20–30 min per topic (explain + 2 scenarios)
+Total: 22 conceptual topics — 2 YOE target ke liye enough
+
+
+================================================================================
+FOLDER MAP (study order → folder)
+================================================================================
+Q1  Call Stack vs Heap          → 14-call-stack-vs-heap/          (NEW)
+Q2  Value vs Reference          → 15-value-vs-reference/          (NEW)
+Q3  == / === / Truthy           → 16-equality-truthy-falsy/       (NEW)
+Q4  null vs undefined           → 17-null-vs-undefined/           (NEW)
+Q5  Hoisting & TDZ              → 03-hoisting/                    (existing)
+Q6  Closures                    → 02-closures/                    (existing)
+Q7  this keyword                → 04-this-keyword/                (existing)
+Q8  ES6 Essentials              → 18-es6-essentials/              (NEW)
+Q9  Prototype basics            → 05-prototype-chain/             (existing)
+Q10 Map/Set/WeakMap/WeakSet     → 19-collections-overview/ (NEW) + 08-weakmap-vs-map + 09-set-vs-array
+Q11 Shallow vs Deep Copy        → 10-shallow-vs-deep-copy/        (existing)
+Q12 HOF & Array Methods         → 11-hof-array-methods/           (NEW)
+Q13 Promises + all/allSettled   → 20-promises/                    (NEW)
+Q14 Async / Await               → 21-async-await/                 (NEW)
+Q15 Event Loop                  → 22-event-loop/                  (NEW)
+Q16 DOM select/create           → 23-dom-select-create/           (NEW)
+Q17 preventDefault vs stopProp  → 24-preventdefault-vs-stoppropagation/ (NEW)
+Q18 Bubbling / Delegation       → 01-event-delegation/ + 06-07-event-bubble-capture/ (existing)
+Q19 Debounce vs Throttle        → 12-debounce-vs-throttle/        (existing)
+Q20 Browser Storage             → 25-browser-storage/             (NEW)
+Q21 Rendering basics            → 26-rendering-basics/            (NEW)
+Q22 Modules                     → 27-modules/                     (NEW)
+
+Note: Existing folders (01–10, 12–13, etc.) untouched. New folders = comment-only task files.
+================================================================================
