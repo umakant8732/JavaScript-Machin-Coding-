@@ -1,0 +1,131 @@
+.todo-container {
+    max-width: 550px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 12px;
+}
+
+.back-link {
+    display: inline-block;
+    color: #3b82f6;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+
+.todo-title {
+    font-size: 1rem;
+    color: #0f172a;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+
+.todo-form {
+    display: flex;
+    gap: 0.75;
+    margin-bottom: 2rem;
+}
+
+.todo-input {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    border: 1px solid #cbd5e1;
+    font-size: 1rem;
+    outline: none;
+}
+
+.todo-input:focus {
+    border-color: #3b82f6;
+}
+
+.todo-add-btn {
+    padding: 0.75rem 1.5rem;
+    background-color: #3b82f6;
+    color: #ffffff;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.todo-add-btn:hover {
+    background-color: #2563eb;
+}
+
+.todo-form {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+}
+
+.todo-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.todo-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.todo-item:last-child {
+    border-bottom: none;
+}
+
+
+.todo-content {
+    display : flex;
+    align-items: center;
+    gap : 0.75rem;
+}
+
+.todo-checkbox {
+    width: 1.15rem;
+    height: 1.15rem;
+    cursor: pointer;
+}
+
+.todo-text {
+    font-size: 1rem;
+    color: #334155;
+    word-break: break-all;
+}
+
+.completed .todo-text {
+    text-decoration: line-through;
+    color : #94a3b8
+}
+
+.todo-actions {
+    display: flex;
+    gap : 0.5rem
+}
+
+.todo-actions button {
+    padding: 0.4rem 0.8rem;
+    border: 1px solid #0f172a;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.edit-btn {
+    background-color: #f1f5f9; 
+}
+
+
+.delete-btn {
+   
+  background-color: #fee2e2;        /* Red color */
+}
