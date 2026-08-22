@@ -1,0 +1,45 @@
+/* Container ko thoda sundar box banaya */
+.tabs-container {
+  width: 500px;
+  margin: 50px auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: sans-serif;
+}
+
+/* Header line jisme buttons honge, usko flex karke side-by-side rakha */
+.tabs-header {
+  display: flex;
+  background-color: #f1f1f1;
+  border-bottom: 1px solid #ccc;
+}
+
+/* Buttons ki styling */
+.tabs-header button {
+  flex: 1;
+  /* Saare buttons equal space lenge */
+  padding: 15px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+  /* Hover pe smooth transition ke liye */
+}
+
+.tabs-header button:hover {
+  background-color: #ddd;
+}
+
+/* Content area ki styling */
+.tabs-content {
+  padding: 20px;
+}
+
+.active {
+  background-color: #ffffff;
+  border-bottom: 3px solid #007bff;
+  /* Niche ek neeli line aa jayegi */
+  font-weight: bold;
+  color: #007bff;
+}

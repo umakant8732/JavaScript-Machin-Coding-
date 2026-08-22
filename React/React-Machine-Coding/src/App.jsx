@@ -1,6 +1,7 @@
 import { Routes, Route} from 'react-router-dom';
 import Home from './components/Home';
 import Todo from './components/Todo/Todo.jsx';
+import Tabs from './components/Tabs/Tabs.jsx';
 import './App.css';
 
 function App() {
@@ -14,6 +15,13 @@ function App() {
         path="/todo-list" 
         element={
          <Todo/>
+        } 
+      />
+
+      <Route 
+        path="/tabs" 
+        element={
+         <Tabs/>
         } 
       />
     </Routes>

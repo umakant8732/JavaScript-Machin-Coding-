@@ -1,0 +1,40 @@
+React Machine Coding Topics (Easy to Hard)
+
+🟢 Easy (Beginner Level)
+1. React Tabs
+2. React Accordion
+3. React FAQ Component
+4. React Progress Bar
+5. React Modal (Click Outside to Close)
+6. React Toast (Notification popup)
+7. Typing Effect in React
+8. React Star Rating
+9. React Search Bar (Basic list filtering)
+10. useMemo Concept
+
+🟡 Medium (Intermediate Level)
+11. React Todo App
+12. React Editable Todo
+13. React Stopwatch / Timer
+14. React Traffic Lights
+15. React Pagination
+16. React Stepper (Multi-step form layout)
+17. React OTP (Auto-focus, backspace handling)
+18. React Carousel (Image slider with auto-play)
+19. React Crypto Converter (API fetching and math)
+20. Multi-Select Dropdown with Tags in React
+21. Tic Tac Toe (N * N matrix logic)
+22. Memory Game
+23. Whack-a-Mole Game in React
+
+🔴 Hard (Advanced Level)
+24. React Infinite Scroll (Intersection Observer API)
+25. Infinite Nested Comments (Recursive components)
+26. React File Explorer
+27. File Explorer 2 (With add/delete/edit folder features)
+28. React Calendar (Date manipulations aur grid layout)
+29. Drag and Drop in React
+30. React File Uploader With Drag And Drop
+31. React Snake Game (2D Array grid aur Game Loop logic)
+32. React Virtualized List (Performance optimization for 10000+ items)
+33. Overlapping Calendar Events (Algorithm & layout calculation heavy)
