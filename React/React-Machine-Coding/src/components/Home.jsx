@@ -27,6 +27,15 @@ export default function Home() {
             <span className="card-action">Start Coding →</span>
           </div>
         </Link>
+
+        <Link to="/accordion" className="card-link">
+          <div className="card">
+            <div className="card-badge">React (Easy)</div>
+            <h2>3. React Accordion</h2>
+            <p>Build a collapsible content panel for FAQs.</p>
+            <span className="card-action">Start Coding →</span>
+          </div>
+        </Link>
       </div>
     </div>
   );

@@ -2,6 +2,7 @@ import { Routes, Route} from 'react-router-dom';
 import Home from './components/Home';
 import Todo from './components/Todo/Todo.jsx';
 import Tabs from './components/Tabs/Tabs.jsx';
+import Accordion from './components/Accordion/Accordion.jsx';
 import './App.css';
 
 function App() {
@@ -22,6 +23,13 @@ function App() {
         path="/tabs" 
         element={
          <Tabs/>
+        } 
+      />
+      
+      <Route 
+        path="/accordion" 
+        element={
+         <Accordion/>
         } 
       />
     </Routes>
