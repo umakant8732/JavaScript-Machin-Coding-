@@ -36,6 +36,30 @@ export default function Home() {
             <span className="card-action">Start Coding →</span>
           </div>
         </Link>
+      <Link to="/faq" className="card-link">
+          <div className="card">
+            <div className="card-badge">React (Easy)</div>
+            <h2>4. React FAQ</h2>
+            <p>Build a dynamic FAQ section.</p>
+            <span className="card-action">Start Coding →</span>
+          </div>
+        </Link>
+      <Link to="/progress-bar" className="card-link">
+          <div className="card">
+            <div className="card-badge">React (Medium)</div>
+            <h2>5. Progress Bar</h2>
+            <p>Build an animated progress bar.</p>
+            <span className="card-action">Start Coding →</span>
+          </div>
+        </Link>
+      <Link to="/modal" className="card-link">
+          <div className="card">
+            <div className="card-badge">React (Medium)</div>
+            <h2>6. Modal Component</h2>
+            <p>Build a customizable popup modal.</p>
+            <span className="card-action">Start Coding →</span>
+          </div>
+        </Link>
       </div>
     </div>
   );

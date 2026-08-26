@@ -94,7 +94,7 @@ PHASE 3: OBJECTS, COLLECTIONS & COPY
         freq / Two Sum style     → Object or Map
         unique / seen            → Set
         private metadata on DOM/obj → WeakMap (awareness)
-    - Note: Deep WeakMap GC theory skip; bas difference + kab use
+    - Note: Deep WeakMap GC theory skip; just difference + when to use
 
 11. Shallow vs Deep Copy
     - Spread / Object.assign = shallow (nested still shared)
@@ -108,7 +108,7 @@ PHASE 4: FUNCTIONS & ARRAY METHODS
 
 12. Higher-Order Functions & Array Methods
     - HOF = takes/returns function
-    - map vs filter vs reduce vs forEach — kab kaunsa (verbally)
+    - map vs filter vs reduce vs forEach — when to use which (verbally)
     - Polyfill practice → Machine Coding (yahan sirf concept)
 
 
@@ -147,15 +147,15 @@ PHASE 6: DOM & BROWSER (MERN frontend rounds)
 17. Events: addEventListener + preventDefault vs stopPropagation
     - click, input, submit, keydown
     - event.target vs event.currentTarget
-    - preventDefault(): browser ka DEFAULT action roko
-        Scenario A: form submit → page reload mat ho
-        Scenario B: <a href> click → navigate mat ho
-        Scenario C: input type=number scroll / context menu (jab default unwanted ho)
-    - stopPropagation(): event ko parent listeners tak mat jane do (bubble/capture stop)
-        Scenario A: button inside clickable card — button click pe card ka click na chale
-        Scenario B: dropdown item click — document pe laga "outside click close" na fire ho galat time pe
-        Scenario C: nested menus — child click parent handler ko na trigger kare
-    - Dono saath: form button pe kabhi preventDefault + stopPropagation (rare; samajh ke use)
+    - preventDefault(): stop browser's DEFAULT action
+        Scenario A: form submit → page reload should not happen
+        Scenario B: <a href> click → navigation should not happen
+        Scenario C: input type=number scroll / context menu (when default is unwanted)
+    - stopPropagation(): do not let event go to parent listeners (bubble/capture stop)
+        Scenario A: button inside clickable card — button click shouldn't trigger card click
+        Scenario B: dropdown item click — "outside click close" registered on document shouldn't fire at wrong time
+        Scenario C: nested menus — child click shouldn't trigger parent handler
+    - Both together: form button sometimes preventDefault + stopPropagation (rare; use with understanding)
     - Rule: default browser behavior → preventDefault | parent handlers block → stopPropagation
 
 18. Event Bubbling, Capturing & Delegation
@@ -199,7 +199,7 @@ SKIP / LATER (abhi mat pehlo)
 
 
 ================================================================================
-WEEKLY ORDER (number sequence follow karo)
+WEEKLY ORDER (follow the number sequence)
 ================================================================================
 Week 1: Q1 → Q4   (stack/heap, value/ref, ===, null/undefined)
 Week 2: Q5 → Q8   (hoisting, closure, this, ES6)
