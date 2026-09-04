@@ -3,7 +3,7 @@ JAVASCRIPT CONCEPTUAL — 2 YEARS MERN (Service / Mid-size / Bangalore Startup)
 ================================================================================
 
 Target: Explain concepts clearly + predict output / short scenarios.
-Study order = question number order (1 → last). Pehle fundamentals, phir async, phir DOM.
+Study order = question number order (1 → last). First fundamentals, then async, then DOM.
 
 How to study:
 1. Read topic → explain in your own words (out loud)
@@ -12,15 +12,15 @@ How to study:
 
 
 ================================================================================
-PHASE 1: MEMORY & TYPES (Pehle yeh — baaki ka base)
+PHASE 1: MEMORY & TYPES (Start here — foundation for the rest)
 ================================================================================
 
 1. Call Stack vs Heap (Short Diagram)
-   - Call Stack: function calls / execution order (LIFO). Sync code yahan chalta hai.
-   - Heap: objects/arrays/functions ka actual data store (badi memory area).
-   - Primitive values mostly stack-side copy; objects heap pe, variable sirf reference rakhta hai.
+   - Call Stack: function calls / execution order (LIFO). Synchronous code executes here.
+   - Heap: actual data storage for objects/arrays/functions (large memory area).
+   - Primitive values are mostly stored on the stack; objects live in the heap, variables only hold references.
 
-   Diagram (yaad rakhna):
+   Diagram (Keep in mind):
    ```
    CALL STACK (execution)          HEAP (data)
    ┌─────────────────┐             ┌──────────────────────┐
@@ -28,14 +28,14 @@ PHASE 1: MEMORY & TYPES (Pehle yeh — baaki ka base)
    │ fnA()           │  reference  │  [1, 2, 3]           │
    │ main/script     │ ──────────► │  large objects live  │
    └─────────────────┘             └──────────────────────┘
-   Stack = "ab kaunsa function chal raha"
-   Heap  = "data kahan pada hai"
+   Stack = "which function is currently executing"
+   Heap  = "where the data actually lives"
    ```
 
 2. Value vs Reference Types
    - Primitives (number, string, boolean, null, undefined, symbol, bigint) → copy by value
    - Objects / arrays / functions → copy by reference (same heap object)
-   - Why `obj2 = obj1` dono change karta hai; kaise alag reference banaye
+   - Why `obj2 = obj1` mutates both; how to create a separate reference
 
 3. == vs === and Truthy / Falsy
    - === strict (type + value); == loose (coercion) — prefer ===
@@ -109,7 +109,7 @@ PHASE 4: FUNCTIONS & ARRAY METHODS
 12. Higher-Order Functions & Array Methods
     - HOF = takes/returns function
     - map vs filter vs reduce vs forEach — when to use which (verbally)
-    - Polyfill practice → Machine Coding (yahan sirf concept)
+    - Polyfill practice → Machine Coding (only concept here)
 
 
 ================================================================================
@@ -119,8 +119,8 @@ PHASE 5: ASYNC JS (Promises → await → Event Loop)
 13. Promises (States, Chaining, all vs allSettled)
     - States: pending → fulfilled / rejected
     - .then / .catch / .finally; microtasks
-    - Promise.all: saari success chahiye; EK bhi reject → overall reject
-    - Promise.allSettled: saari settle hone do; har result {status, value/reason}
+    - Promise.all: requires all to succeed; even ONE rejection → overall rejection
+    - Promise.allSettled: wait for all to settle; returns each result {status, value/reason}
     - One-liner: all = fail-fast | allSettled = wait for everyone, no fail-fast
 
 14. Async / Await
@@ -189,13 +189,13 @@ PHASE 7: PROJECT STRUCTURE
 
 
 ================================================================================
-SKIP / LATER (abhi mat pehlo)
+SKIP / LATER (do not dive deep right now)
 ================================================================================
-- WeakMap/WeakSet ka bahut deep GC internals (Q10 pe sirf usage enough)
+- Deep GC internals of WeakMap/WeakSet (usage in Q10 is sufficient)
 - Full Promise polyfill engine
 - Heavy currying / compose / pipe
 - Generators / Proxies / Symbols deep dive
-- Strict mode long lecture (this ke saath lightly cover)
+- Strict mode long lecture (cover lightly along with this)
 
 
 ================================================================================
@@ -209,7 +209,7 @@ Week 5: Q16 → Q21 (DOM + events + storage + render)
 Week 6: Q22 + revision of weak topics
 
 Estimated: 20–30 min per topic (explain + 2 scenarios)
-Total: 22 conceptual topics — 2 YOE target ke liye enough
+Total: 22 conceptual topics — sufficient for 2 YOE target
 
 
 ================================================================================

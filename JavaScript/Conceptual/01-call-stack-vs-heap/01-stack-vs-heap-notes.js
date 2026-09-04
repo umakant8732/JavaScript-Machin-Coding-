@@ -57,6 +57,4 @@ let user = {
   However, the 'user' variable itself sits in the STACK. 
   Instead of holding the data, it holds a "Pointer" or "Memory Address" pointing to the HEAP.
   
-  This is why in the previous "Shallow/Deep Copy" chapter, when we did 'let copyUser = user', 
-  we were NOT copying the actual data; we were only copying the STACK Reference (Address)!
 */

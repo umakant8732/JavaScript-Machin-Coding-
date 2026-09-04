@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Debounce vs Throttle</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      max-width: 500px;
+      margin: 20px auto;
+      padding: 10px;
+    }
+
+    section {
+      border: 1px solid #ccc;
+      padding: 12px;
+      margin-bottom: 16px;
+    }
+
+    input, button {
+      display: block;
+      width: 100%;
+      padding: 8px;
+      margin: 8px 0;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+  <h1>Debounce vs Throttle</h1>
+
+  <section>
+    <h2>Debounce (search)</h2>
+    <p>Type fast. API triggers in console only after typing stops (500ms).</p>
+    <input type="text" id="debounce-input" placeholder="Type to search..." />
+  </section>
+
+  <section>
+    <h2>Throttle (button) — upcoming implementation</h2>
+    <button id="throttle-btn">Click rapidly</button>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
