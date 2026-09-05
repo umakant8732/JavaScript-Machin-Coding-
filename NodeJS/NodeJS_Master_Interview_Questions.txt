@@ -1,0 +1,451 @@
+================================================================================
+NODE.JS, EXPRESS & MONGODB MASTER INTERVIEW QUESTIONS (18 PARTS)
+================================================================================
+Target: Complete 360° Backend Preparation (Node.js, Express, MongoDB, Security, Performance & System Scenarios)
+================================================================================
+
+
+--------------------------------------------------------------------------------
+PART 1 — NODE.JS BASICS
+--------------------------------------------------------------------------------
+Q1.  Node.js kya hai?
+Q2.  Node.js runtime environment kya hota hai?
+Q3.  Node.js aur JavaScript mein kya difference hai?
+Q4.  Node.js aur browser JavaScript mein difference?
+Q5.  Node.js single-threaded kya hota hai?
+Q6.  Node.js ke advantages kya hain?
+Q7.  Node.js ke disadvantages kya hain?
+Q8.  Node.js kis type ke applications ke liye suitable hai?
+Q9.  Node.js CPU-intensive tasks ke liye suitable kyun nahi hai?
+Q10. V8 engine kya hai?
+Q11. Node.js V8 engine ka use kaise karta hai?
+Q12. Node.js architecture explain karo.
+Q13. Blocking vs non-blocking kya hai?
+Q14. Synchronous vs asynchronous kya hai?
+Q15. I/O operation kya hota hai?
+Q16. Node.js I/O operations ko efficiently kaise handle karta hai?
+Q17. npm kya hai?
+Q18. package.json kya hai?
+Q19. package-lock.json kya hai?
+Q20. dependencies vs devDependencies?
+Q21. npm install vs npm ci?
+Q22. node_modules kya hai?
+Q23. npx kya hai?
+Q24. Environment variables kya hain?
+Q25. .env file ka use kyun karte hain?
+
+
+--------------------------------------------------------------------------------
+PART 2 — NODE.JS MODULES
+--------------------------------------------------------------------------------
+Q26. Node.js modules kya hote hain?
+Q27. CommonJS kya hai?
+Q28. ES Modules kya hain?
+Q29. require() vs import?
+Q30. module.exports vs exports?
+Q31. Built-in Node.js modules kaunse hain?
+Q32. fs module kya hai?
+Q33. path module kya hai?
+Q34. os module kya hai?
+Q35. http module kya hai?
+Q36. events module kya hai?
+Q37. EventEmitter kya hai?
+Q38. process object kya hai?
+Q39. process.env kya hai?
+Q40. __dirname kya hai?
+Q41. __filename kya hai?
+
+
+--------------------------------------------------------------------------------
+PART 3 — CALLBACK / PROMISE / ASYNC
+--------------------------------------------------------------------------------
+Q42. Callback kya hota hai?
+Q43. Callback function ka real-world use?
+Q44. Callback hell kya hai?
+Q45. Callback hell ko kaise solve karoge?
+Q46. Promise kya hai?
+Q47. Promise ke states kya hain?
+Q48. Promise chaining kya hai?
+Q49. async/await kya hai?
+Q50. Promise vs async/await?
+Q51. try/catch async code mein kaise work karta hai?
+Q52. Promise.all() kya hai?
+Q53. Promise.allSettled() kya hai?
+Q54. Promise.race() kya hai?
+Q55. Promise.any() kya hai?
+Q56. Sequential vs parallel API calls?
+Q57. Multiple independent API calls ko parallel kaise execute karoge?
+Q58. Agar ek Promise fail ho jaye to Promise.all() mein kya hota hai?
+
+
+--------------------------------------------------------------------------------
+PART 4 — EVENT LOOP (🔥 VERY IMPORTANT)
+--------------------------------------------------------------------------------
+Q59. Event Loop kya hai?
+Q60. Event Loop ki zarurat kyun hai?
+Q61. Call Stack kya hai?
+Q62. Callback Queue kya hai?
+Q63. Microtask Queue kya hai?
+Q64. Macrotask Queue kya hai?
+Q65. Event Loop kaise work karta hai?
+Q66. process.nextTick() kya hai?
+Q67. setTimeout() kya hai?
+Q68. setImmediate() kya hai?
+Q69. process.nextTick() vs setImmediate()?
+Q70. setTimeout() vs setImmediate()?
+Q71. Promise callbacks kis queue mein jaate hain?
+Q72. Node.js asynchronous kaise hota hai agar JavaScript single-threaded hai?
+Q73. Libuv kya hai?
+Q74. Libuv ka role kya hai?
+Q75. Thread Pool kya hai?
+Q76. Node.js Thread Pool mein kitne threads hote hain by default?
+Q77. Kaunse operations Thread Pool use karte hain?
+Q78. Event Loop block hone ka kya matlab hai?
+Q79. Event Loop block hone se application par kya effect padega?
+
+
+--------------------------------------------------------------------------------
+PART 5 — ERROR HANDLING
+--------------------------------------------------------------------------------
+Q80. Node.js mein error handling kaise karte ho?
+Q81. Synchronous error vs asynchronous error?
+Q82. try/catch kab use karte ho?
+Q83. Custom Error kaise create karoge?
+Q84. Error object kya hai?
+Q85. Operational error vs programming error?
+Q86. Express mein centralized error handling kaise karoge?
+Q87. Async controller mein error kaise handle karoge?
+Q88. Unhandled Promise rejection kya hai?
+Q89. Uncaught exception kya hai?
+Q90. Production application mein process crash hone par kya karoge?
+
+
+--------------------------------------------------------------------------------
+PART 6 — EXPRESS.JS BASICS
+--------------------------------------------------------------------------------
+Q91.  Express.js kya hai?
+Q92.  Node.js vs Express.js?
+Q93.  Express use karne ke benefits?
+Q94.  Express server kaise create karoge?
+Q95.  Route kya hota hai?
+Q96.  Router kya hota hai?
+Q97.  Express Router kyun use karte hain?
+Q98.  Middleware kya hai?
+Q99.  Middleware kaise work karta hai?
+Q100. next() kya karta hai?
+Q101. Agar next() call nahi kiya to kya hoga?
+Q102. Application-level middleware?
+Q103. Router-level middleware?
+Q104. Built-in middleware?
+Q105. Third-party middleware?
+Q106. Error-handling middleware?
+Q107. Middleware execution order important kyun hai?
+Q108. Multiple middleware kaise execute hote hain?
+Q109. Global middleware kya hota hai?
+Q110. Route-specific middleware kya hota hai?
+
+
+--------------------------------------------------------------------------------
+PART 7 — REQUEST / RESPONSE
+--------------------------------------------------------------------------------
+Q111. req.params kya hai?
+Q112. req.query kya hai?
+Q113. req.body kya hai?
+Q114. req.headers kya hai?
+Q115. req.cookies kya hai?
+Q116. req.params vs req.query vs req.body?
+Q117. Path parameter kya hai?
+Q118. Query parameter kya hai?
+Q119. Request body kya hai?
+Q120. HTTP status code kya hai?
+Q121. 200 vs 201?
+Q122. 400 vs 401?
+Q123. 401 vs 403?
+Q124. 404 kab return karoge?
+Q125. 409 kab use karoge?
+Q126. 422 kab use karoge?
+Q127. 500 kab return hota hai?
+Q128. res.send() vs res.json()?
+Q129. res.status() kya karta hai?
+Q130. API response ka standard structure kaise design karoge?
+
+
+--------------------------------------------------------------------------------
+PART 8 — REST API
+--------------------------------------------------------------------------------
+Q131. REST API kya hai?
+Q132. REST ke principles kya hain?
+Q133. RESTful API kya hoti hai?
+Q134. GET vs POST?
+Q135. PUT vs PATCH?
+Q136. DELETE request kaise design karoge?
+Q137. PUT idempotent kyun hai?
+Q138. Idempotency kya hai?
+Q139. HTTP methods kaunse hain?
+Q140. API endpoint kya hai?
+Q141. Resource kya hota hai REST mein?
+Q142. API versioning kya hai?
+Q143. /api/v1/users kyun use karte hain?
+Q144. REST API aur normal API mein difference?
+Q145. Good API endpoint kaise design karoge?
+Q146. Nested routes kya hain?
+Q147. API pagination kya hai?
+Q148. Offset pagination kya hai?
+Q149. Cursor pagination kya hai?
+Q150. Offset vs cursor pagination?
+Q151. Filtering kaise implement karoge?
+Q152. Sorting kaise implement karoge?
+Q153. Searching kaise implement karoge?
+
+
+--------------------------------------------------------------------------------
+PART 9 — API VALIDATION & SECURITY
+--------------------------------------------------------------------------------
+Q154. Input validation kya hai?
+Q155. Backend validation kyun necessary hai?
+Q156. Frontend validation ke baad backend validation kyun karni chahiye?
+Q157. Joi kya hai?
+Q158. Zod kya hai?
+Q159. express-validator kya hai?
+Q160. Input sanitization kya hai?
+Q161. SQL injection kya hai?
+Q162. NoSQL injection kya hai?
+Q163. XSS kya hai?
+Q164. CSRF kya hai?
+Q165. CORS kya hai?
+Q166. CORS error kyun aata hai?
+Q167. CORS kaise configure karoge?
+Q168. Helmet kya hai?
+Q169. Rate limiting kya hai?
+Q170. API ko secure karne ke basic steps kya hain?
+
+
+--------------------------------------------------------------------------------
+PART 10 — AUTHENTICATION
+--------------------------------------------------------------------------------
+Q171. Authentication kya hai?
+Q172. Authorization kya hai?
+Q173. Authentication vs Authorization?
+Q174. JWT kya hai?
+Q175. JWT kaise work karta hai?
+Q176. JWT ke 3 parts kya hain?
+Q177. Access token kya hai?
+Q178. Refresh token kya hai?
+Q179. Access token vs refresh token?
+Q180. JWT authentication middleware kaise banayenge?
+Q181. Token expire hone par kya hoga?
+Q182. Logout kaise implement karoge?
+Q183. Password ko hash kyun karte hain?
+Q184. bcrypt kya hai?
+Q185. Hashing vs encryption?
+Q186. Salt kya hota hai?
+Q187. Role-Based Access Control kya hai?
+Q188. Admin-only API kaise protect karoge?
+
+
+--------------------------------------------------------------------------------
+PART 11 — MONGODB BASICS
+--------------------------------------------------------------------------------
+Q189. MongoDB kya hai?
+Q190. MongoDB NoSQL database kyun kaha jata hai?
+Q191. MongoDB vs MySQL?
+Q192. Database, Collection aur Document kya hain?
+Q193. MongoDB document kya hota hai?
+Q194. BSON kya hai?
+Q195. ObjectId kya hai?
+Q196. _id kya hota hai?
+Q197. MongoDB schema-less hai kya?
+Q198. Mongoose kya hai?
+Q199. Mongoose kyun use karte hain?
+Q200. Schema vs Model?
+Q201. Mongoose Schema kaise create karoge?
+Q202. Mongoose validation kya hai?
+Q203. Required field kaise define karoge?
+Q204. Default value kaise set karoge?
+Q205. Enum validation kya hai?
+Q206. Mongoose middleware/hooks kya hain?
+
+
+--------------------------------------------------------------------------------
+PART 12 — MONGODB QUERIES
+--------------------------------------------------------------------------------
+Q207. find() kya karta hai?
+Q208. findOne() vs find()?
+Q209. findById() kya hai?
+Q210. findById() vs findOne()?
+Q211. create() kya karta hai?
+Q212. insertOne() kya hai?
+Q213. updateOne() kya hai?
+Q214. updateMany() kya hai?
+Q215. findOneAndUpdate() kya hai?
+Q216. deleteOne() kya hai?
+Q217. deleteMany() kya hai?
+Q218. findOneAndDelete() kya hai?
+Q219. $set kya hai?
+Q220. $inc kya hai?
+Q221. $push kya hai?
+Q222. $pull kya hai?
+Q223. $addToSet kya hai?
+Q224. $in kya hai?
+Q225. $nin kya hai?
+Q226. $gt, $gte, $lt, $lte kya hain?
+Q227. $and vs $or?
+Q228. MongoDB projection kya hai?
+Q229. select() kya karta hai?
+Q230. lean() kya hai?
+
+
+--------------------------------------------------------------------------------
+PART 13 — MONGODB RELATIONSHIPS
+--------------------------------------------------------------------------------
+Q231. MongoDB mein relationships kaise represent karte hain?
+Q232. Embedding kya hai?
+Q233. Referencing kya hai?
+Q234. Embedding vs referencing?
+Q235. populate() kya hai?
+Q236. populate() internally kya karta hai?
+Q237. Kab populate() avoid karoge?
+Q238. One-to-one relationship kaise design karoge?
+Q239. One-to-many relationship kaise design karoge?
+Q240. Many-to-many relationship kaise design karoge?
+Q241. MongoDB mein normalization vs denormalization?
+Q242. Denormalization kab useful hai?
+
+
+--------------------------------------------------------------------------------
+PART 14 — MONGODB INDEXING & PERFORMANCE (🔥 VERY IMPORTANT)
+--------------------------------------------------------------------------------
+Q243. MongoDB Index kya hai?
+Q244. Index ki zarurat kyun padti hai?
+Q245. Index ke bina query kaise execute hoti hai?
+Q246. Collection Scan kya hai?
+Q247. Index Scan kya hai?
+Q248. Single-field index kya hai?
+Q249. Compound index kya hai?
+Q250. Unique index kya hai?
+Q251. Text index kya hai?
+Q252. TTL index kya hai?
+Q253. Index ka downside kya hai?
+Q254. Har field par index kyun nahi bana dena chahiye?
+Q255. Compound index ka order important kyun hai?
+Q256. MongoDB query slow ho to kya check karoge?
+Q257. explain() kya hai?
+Q258. executionStats kya hai?
+Q259. Query performance kaise measure karoge?
+Q260. MongoDB indexing strategy kaise decide karoge?
+Q261. Large collection mein query optimize kaise karoge?
+Q262. skip() pagination slow kyun ho sakti hai?
+Q263. Large dataset ke liye better pagination kaise implement karoge?
+
+
+--------------------------------------------------------------------------------
+PART 15 — MONGODB AGGREGATION (🔥 VERY IMPORTANT)
+--------------------------------------------------------------------------------
+Q264. Aggregation kya hai?
+Q265. Aggregation pipeline kya hai?
+Q266. $match kya karta hai?
+Q267. $group kya karta hai?
+Q268. $project kya karta hai?
+Q269. $sort kya karta hai?
+Q270. $limit kya karta hai?
+Q271. $skip kya karta hai?
+Q272. $lookup kya karta hai?
+Q273. $unwind kya karta hai?
+Q274. $count kya karta hai?
+Q275. $sum kya karta hai?
+Q276. $avg kya karta hai?
+Q277. $push kya karta hai?
+Q278. $addFields kya hai?
+Q279. $match ko pipeline ke beginning mein kyun rakhte hain?
+Q280. Aggregation vs normal query?
+Q281. $lookup vs Mongoose populate()?
+Q282. Aggregation query slow ho to kaise optimize karoge?
+
+
+--------------------------------------------------------------------------------
+PART 16 — DATABASE PERFORMANCE
+--------------------------------------------------------------------------------
+Q283. Database query slow hai. Debug kaise karoge?
+Q284. Indexing se query fast kaise hoti hai?
+Q285. Over-indexing kya hai?
+Q286. N+1 query problem kya hai?
+Q287. Connection pooling kya hai?
+Q288. MongoDB connection pool kya hota hai?
+Q289. Database connection baar-baar create karna problem kyun hai?
+Q290. Projection use karne se performance kaise improve hoti hai?
+Q291. lean() performance improve kaise karta hai?
+Q292. Large documents ko fetch karna expensive kyun hai?
+Q293. Database se unnecessary fields fetch karne se kya problem hai?
+Q294. Pagination performance kaise improve karoge?
+Q295. Slow API ka root cause database hai ya Node.js kaise identify karoge?
+
+
+--------------------------------------------------------------------------------
+PART 17 — NODE.JS PERFORMANCE
+--------------------------------------------------------------------------------
+Q296. Node.js application slow ho gayi. Tum kya check karoge?
+Q297. API response time kaise reduce karoge?
+Q298. Event Loop blocking kya hai?
+Q299. Event Loop blocking detect kaise karoge?
+Q300. CPU-intensive task Node.js ko slow kyun karta hai?
+Q301. CPU-heavy task ko Node.js mein kaise handle karoge?
+Q302. Memory leak kya hai?
+Q303. Node.js memory leak kaise detect karoge?
+Q304. Garbage Collection kya hai?
+Q305. Node.js memory usage kaise monitor karoge?
+Q306. Synchronous functions production mein problem kyun ho sakti hain?
+Q307. fs.readFileSync() vs fs.readFile()?
+Q308. Large file ko memory mein load karna problem kyun hai?
+Q309. API response compression kya hai?
+Q310. Parallel processing se API performance kaise improve hoti hai?
+Q311. Database connection pooling performance mein kaise help karta hai?
+Q312. Caching ke bina API performance kaise improve karoge?
+
+
+--------------------------------------------------------------------------------
+🔥🔥 PART 18 — REAL SCENARIO QUESTIONS (INTERVIEW HARD HITS)
+--------------------------------------------------------------------------------
+
+[System & Performance Scenarios]
+Q313. Scenario 1: Ek API ka response 5 seconds le raha hai. Tum debugging kaha se start karoge?
+Q314. Scenario 2: MongoDB query 3–5 seconds le rahi hai. Tum kya check karoge?
+Q315. Scenario 3: API par suddenly 1000 requests/sec aa rahi hain. Node.js backend kaise handle karega?
+Q316. Scenario 4: Ek endpoint par same user repeatedly requests bhej raha hai. Backend ko kaise protect karoge?
+Q317. Scenario 5: MongoDB collection mein 10 million documents hain aur search slow hai. Kya karoge?
+Q318. Scenario 6: User list API mein 1 lakh users hain. Sab ek saath return karna sahi hai?
+Q319. Scenario 7: Pagination implement karni hai. skip/limit kab problem create karega?
+Q320. Scenario 8: User ko 1000 products return karne hain, but API slow ho rahi hai. Kya optimize karoge?
+Q321. Scenario 9: Ek API 5 different database queries execute kar rahi hai. Performance kaise improve karoge?
+Q322. Scenario 10: 5 independent external APIs call karni hain. Sequential vs parallel kya choose karoge?
+
+[Authentication Scenarios]
+Q323. User ka JWT expire ho gaya. Backend kya karega?
+Q324. User logout karta hai. JWT ko invalidate kaise karoge?
+Q325. Kisi user ne admin API access karne ki try ki. Backend kya karega?
+Q326. User apne profile ki jagah kisi aur user ka profile access kar raha hai. Kaise prevent karoge?
+Q327. Password database leak ho gaya. Agar password bcrypt se hashed hai to kya benefit hai?
+Q328. Same user ke multiple devices hain. Authentication architecture kaise design karoge?
+
+[MongoDB Scenarios]
+Q329. User delete kar diya, lekin uske related data bhi delete karna hai. Kaise handle karoge?
+Q330. Order create hua but payment record create nahi hua. Data consistency kaise maintain karoge?
+Q331. MongoDB mein transaction kab use karoge?
+Q332. Transaction kya hai?
+Q333. MongoDB transaction kaise work karti hai?
+Q334. Ek product ka stock simultaneously 2 users purchase kar rahe hain. Race condition kaise handle karoge?
+Q335. Same email se do users create ho rahe hain. Kaise prevent karoge?
+Q336. MongoDB mein duplicate records aa rahe hain. Solution?
+Q337. User ke 10,000 orders hain. User profile ke saath orders fetch karna hai. Kaise design karoge?
+Q338. populate() bahut slow ho gaya hai. Kya alternatives hain?
+
+[Express Scenarios]
+Q339. Ek middleware mein authentication hai aur doosre mein authorization. Order kya hoga?
+Q340. Agar middleware response send kar de aur next() bhi call kar de to kya problem ho sakti hai?
+Q341. Global error handler kaise design karoge?
+Q342. Har controller mein same try/catch likhna pad raha hai. Isko improve kaise karoge?
+Q343. API mein validation fail hoti hai. Consistent error response kaise doge?
+Q344. Express application ka folder structure kaise design karoge?
+Q345. Controller aur service layer mein difference kya hai?
+Q346. Business logic controller mein rakhna chahiye?
+Q347. Large Express application ko scalable kaise structure karoge?
+================================================================================
