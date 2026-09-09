@@ -1,0 +1,123 @@
+================================================================================
+DSA MASTER ROADMAP & QUESTION BANK (TOPIC BY TOPIC)
+================================================================================
+Path: Arrays ➔ HashMap/HashSet ➔ Two Pointer ➔ Sliding Window ➔ Sorting ➔ Binary Search ➔ Stack ➔ Recursion ➔ Linked List ➔ Tree
+Target: Complete Easy & Medium Interview Preparation in JavaScript
+================================================================================
+
+
+--------------------------------------------------------------------------------
+TOPIC 1 — ARRAYS (FOUNDATIONS & MANIPULATION)
+--------------------------------------------------------------------------------
+Q1.  Find Largest and Smallest Element in an Array (Easy)
+Q2.  Find Second Largest Element without Sorting (Easy/Medium)
+Q3.  Reverse an Array In-Place (Easy)
+Q4.  Rotate Array to Right by K Steps (Medium)
+Q5.  Move All Zeros to the End (Easy)
+Q6.  Find Missing Number from 1 to N (Easy)
+Q7.  Remove Duplicates from Array (Easy)
+Q8.  Find Duplicate Elements in an Array (Easy)
+Q9.  Maximum Subarray Sum — Kadane's Algorithm (Medium)
+Q10. Majority Element — Boyer-Moore Voting Algorithm (Easy/Medium)
+Q11. Product of Array Except Self (Medium)
+
+
+--------------------------------------------------------------------------------
+TOPIC 2 — HASHMAP / HASHSET (FREQUENCY & LOOKUP)
+--------------------------------------------------------------------------------
+Q12. Two Sum — Find Indices that sum to Target in O(N) (Easy)
+Q13. Valid Anagram (Easy)
+Q14. Group Anagrams (Medium)
+Q15. First Non-Repeating Character in a String (Easy)
+Q16. Intersection of Two Arrays (Easy)
+Q17. Subarray Sum Equals K (Medium)
+Q18. Longest Consecutive Sequence in Unsorted Array (Medium)
+Q19. Top K Frequent Elements (Medium)
+
+
+--------------------------------------------------------------------------------
+TOPIC 3 — TWO POINTER TECHNIQUE
+--------------------------------------------------------------------------------
+Q20. Move Odd Numbers Left and Even Numbers Right (Easy/Medium)
+Q21. Move Negative Numbers Left and Positive Right (Easy/Medium)
+Q22. Sort an Array of 0s, 1s, and 2s — Dutch National Flag Algorithm (Medium)
+Q23. Squares of a Sorted Array in O(N) (Easy/Medium)
+Q24. Container With Most Water (Medium)
+Q25. 3Sum — Find All Unique Triplets that Sum to Zero (Medium)
+Q26. Trapping Rain Water (Hard/Medium)
+
+
+--------------------------------------------------------------------------------
+TOPIC 4 — SLIDING WINDOW PATTERN
+--------------------------------------------------------------------------------
+Q27. Maximum Sum Subarray of Size K — Fixed Window (Easy/Medium)
+Q28. Smallest Subarray with a Given Sum — Variable Window (Medium)
+Q29. Longest Substring Without Repeating Characters (Medium)
+Q30. Longest Substring with At Most K Distinct Characters (Medium)
+Q31. Find All Anagrams in a String (Medium)
+Q32. Minimum Window Substring (Hard/Medium)
+
+
+--------------------------------------------------------------------------------
+TOPIC 5 — SORTING ALGORITHMS & APPLICATIONS
+--------------------------------------------------------------------------------
+Q33. Implement Bubble Sort & Selection Sort (Easy)
+Q34. Implement Insertion Sort (Easy)
+Q35. Implement Merge Sort — Divide & Conquer (Medium)
+Q36. Implement Quick Sort — Partitioning (Medium)
+Q37. Merge Overlapping Intervals (Medium)
+
+
+--------------------------------------------------------------------------------
+TOPIC 6 — BINARY SEARCH
+--------------------------------------------------------------------------------
+Q38. Binary Search in Sorted Array — Iterative & Recursive (Easy)
+Q39. Find First and Last Position of Element in Sorted Array (Medium)
+Q40. Search in Rotated Sorted Array (Medium)
+Q41. Find Minimum in Rotated Sorted Array (Medium)
+Q42. Search a 2D Matrix (Medium)
+Q43. Square Root of X — Integer sqrt(x) (Easy/Medium)
+
+
+--------------------------------------------------------------------------------
+TOPIC 7 — STACK & MONOTONIC STACK
+--------------------------------------------------------------------------------
+Q44. Valid Parentheses — (), {}, [] Matching (Easy)
+Q45. Implement Stack Using Queues / Array (Easy)
+Q46. Min Stack — Get Minimum in O(1) Time (Medium)
+Q47. Evaluate Reverse Polish Notation — Postfix Expression (Medium)
+Q48. Next Greater Element I (Easy/Medium)
+Q49. Daily Temperatures — Monotonic Stack (Medium)
+
+
+--------------------------------------------------------------------------------
+TOPIC 8 — RECURSION & BACKTRACKING
+--------------------------------------------------------------------------------
+Q50. Factorial & Fibonacci with Memoization (Easy)
+Q51. Power Function — pow(x, n) in O(log N) (Medium)
+Q52. Generate All Subsets / Subsequences of Array (Medium)
+Q53. Generate All Permutations of Array / String (Medium)
+Q54. Combination Sum (Medium)
+
+
+--------------------------------------------------------------------------------
+TOPIC 9 — LINKED LIST
+--------------------------------------------------------------------------------
+Q55. Reverse a Singly Linked List — Iterative & Recursive (Easy/Medium)
+Q56. Detect Cycle in Linked List — Floyd's Tortoise & Hare (Easy/Medium)
+Q57. Find Middle Node of Linked List (Easy)
+Q58. Merge Two Sorted Linked Lists (Easy)
+Q59. Remove Nth Node From End of List (Medium)
+Q60. Palindrome Linked List (Easy/Medium)
+
+
+--------------------------------------------------------------------------------
+TOPIC 10 — BINARY TREE & BST
+--------------------------------------------------------------------------------
+Q61. Binary Tree Traversals — Inorder, Preorder, Postorder (Easy)
+Q62. Level Order Traversal — BFS using Queue (Medium)
+Q63. Maximum Depth / Height of Binary Tree (Easy)
+Q64. Invert / Flip Binary Tree (Easy)
+Q65. Lowest Common Ancestor (LCA) in Binary Tree (Medium)
+Q66. Validate Binary Search Tree (BST) (Medium)
+Q67. Search and Insert in BST (Easy/Medium)
